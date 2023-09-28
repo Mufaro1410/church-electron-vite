@@ -1,8 +1,8 @@
+import { Box, Grid, ListItem } from "@mui/material";
+
 export default function Members() {
   return (
-    <div>
-      <h1>Members Page</h1>
-    </div>
+    <h1>Members Page</h1>
   );
 }
 

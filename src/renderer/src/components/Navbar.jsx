@@ -1,19 +1,56 @@
 import { Link } from 'react-router-dom';
-// import '../../../assets/css/styles.css';
+import { Drawer, Toolbar, Typography, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material'
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 
 export default function Navbar() {
+  const drawerWidth = 300;
+
   return (
-    <div>
-      <nav>
-        <h1>St Peters UMC</h1>
-        <Link to="home">Home</Link>
-        <Link to="members">Members</Link>
-        <Link to="finance">Finance</Link>
-        <Link to="events">Events</Link>
-        <Link to="reports">Reports</Link>
-        <Link to="settings">Settings</Link>
-        <Link to="/">Logout</Link>
-      </nav>
-    </div>
+    <Drawer
+      sx={{
+        width: drawerWidth,
+        flexShrink: 0,
+        '& .MuiDrawer-paper': {
+          width: drawerWidth,
+          boxSizing: 'border-box',
+        },
+      }}
+      variant="permanent"
+      anchor="left"
+    >
+      {/* <Toolbar /> */}
+      <Typography component="h1" variant="h3">
+        St Peters UMC
+      </Typography>
+      <Divider />
+      <List>
+        {['Home', 'Members', 'Finance', 'Events', 'Reports', 'Settings'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              {/* <ListItemText primary={text} /> */}
+              <Link to={text.toLowerCase()}>{text}</Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['Logout'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              {/* <ListItemText primary={text} /> */}
+              <Link to="/">{text}</Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
   );
 }

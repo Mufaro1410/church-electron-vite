@@ -30,9 +30,9 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path__namespace.join(__dirname, "../preload/preload.js")
-    },
-    webSecurity: false
+      preload: path__namespace.join(__dirname, "../../out/preload/preload.js"),
+      webSecurity: false
+    }
   });
   mainWindow.loadURL("http://localhost:5173");
   mainWindow.on("closed", () => mainWindow = null);

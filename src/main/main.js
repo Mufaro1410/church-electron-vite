@@ -15,9 +15,9 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, '../preload/preload.js')
+      preload: path.join(__dirname, '../../out/preload/preload.js'),
+      webSecurity: false,
     },
-    webSecurity: false
   });
 
   // Vite dev server URL

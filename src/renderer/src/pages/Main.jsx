@@ -1,5 +1,6 @@
 import '../App.css';
 import { Routes, Route } from 'react-router-dom';
+import { Box, Toolbar, CssBaseline } from '@mui/material'
 
 import Navbar from '../components/Navbar';
 import Home from './Home';
@@ -12,11 +13,8 @@ import Settings from './Settings';
 export default function Main() {
   return (
     <div>
-      {/* <div className="container"> */}
-      <div className="sidenav">
-        <Navbar />
-      </div>
-      <div className="content">
+      <Navbar />
+      <div>
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="members" element={<Members />} />
@@ -27,7 +25,6 @@ export default function Main() {
           <Route index element={<Home />} />
         </Routes>
       </div>
-      {/* </div> */}
     </div>
   );
 }
