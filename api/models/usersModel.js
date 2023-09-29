@@ -1,11 +1,13 @@
-const UserSchema = require('../schemas/userSchema');
-const { passwordEncrpt } = require('../../assets/utils/login');
+import { UserSchema } from '../schemas/userSchema';
+import { passwordEncrpt } from '../../src/renderer/src/assets/js/login';
 
 const createUserTable = async () => {
   const res = await UserSchema.sync();
   return res;
   // console.log(res);
 };
+
+// createUserTable()
 
 const dropUserTable = async () => {
   const res = await UserSchema.drop();
@@ -18,10 +20,11 @@ const addUser = async (data) => {
     const userPassword = data.password;
     const hashedPassword = await passwordEncrpt(userPassword);
     data.password = hashedPassword;
+    console.log(data);
     const res = await UserSchema.create(data);
     return res.toJSON();
   } catch (error) {
-    return error.toJSON();
+    return error;
   }
 };
 
@@ -73,7 +76,7 @@ const removeUser = async (id) => {
   }
 };
 
-module.exports = {
+export {
   createUserTable,
   dropUserTable,
   getUser,

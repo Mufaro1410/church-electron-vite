@@ -1,7 +1,6 @@
-// const sequelize = require('../dbConfig')
-const { MaritalStatusSchema } = require('../schemas/memberSchema')
+// import { MaritalStatusSchema } from '../schemas/memberSchema'
+const MaritalStatusSchema = require('../../api/schemas/memberSchema').MaritalStatusSchema
 
-// Creating table
 const createMaritalStatusTable = async () => {
     const res = await MaritalStatusSchema.sync()
     return res
@@ -75,7 +74,7 @@ const removeMaritalStatus = async (id) => {
     }
 }
 
-module.exports = {
+export {
     createMaritalStatusTable,
     dropMaritalStatusTable,
     getMaritalStatuses,

@@ -1,5 +1,3 @@
-import { Box, Grid, Card, CardContent, CardActions, Button, Typography} from '@mui/material'
-
 export default function Home() {
   const statsData = [{name: 'Members Total', total: 1100}, 
     {name: 'MUMC Total', total: 200}, {name: 'MUMC Full', total: 150}, {name: 'MUMC Probation', total: 50},
@@ -9,26 +7,118 @@ export default function Home() {
   ]
 
   return (
-    <Box component="main" sx={{ flexGrow: 1, p: 3}}>
-      <Grid container spacing={{ xs: 2, md: 3 }} >
-        {statsData.map((stat, index) => (
-          <Grid item  key={index}>
-            <Card sx={{ minWidth: 275 }}>
-              <CardContent>
-                <Typography variant="h5" component="div">
-                  {stat.name}
-                </Typography>
-                <Typography variant="h5" component="div">
-                  {stat.total}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+    <div className="container">
+      <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-5">
+        {/* {statsData.map( stat => { */}
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+
+          <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
+            <div className="text-sm font-medium text-gray-500 truncate">
+              {statsData[0].name}
+            </div>
+            <div className="mt-1 text-3xl font-semibold text-gray-900">
+              {statsData[0].total}
+            </div>
+          </div>
+        {/* })} */}
+      </div>
+    </div>
   );
 }
-
-//  columns={{ xs: 2, sm: 8, md: 12 }}
-// xs={2} sm={4} md={4}

@@ -1,11 +1,11 @@
-import { readFile } from 'fs';
+// import { readFile } from 'fs';
 import { useState } from 'react';
 import * as xlsx from 'xlsx';
 
 function AddMembers() {
   const [fileJSON, setFileJSON] = useState([]);
 
-  const readUploadFile = (e: any) => {
+  const readUploadFile = (e) => {
     e.preventDefault();
     if (e.target.files) {
       const reader = new FileReader();
@@ -16,7 +16,7 @@ function AddMembers() {
         const worksheet = workbook.Sheets[sheetName];
         const jsonData = xlsx.utils.sheet_to_json(worksheet);
         setFileJSON(jsonData);
-        console.log(jsonData);
+        // console.log(jsonData);
       };
       reader.readAsArrayBuffer(e.target.files[0]);
     }

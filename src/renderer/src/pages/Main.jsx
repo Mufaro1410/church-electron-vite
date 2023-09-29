@@ -1,8 +1,6 @@
-import '../App.css';
 import { Routes, Route } from 'react-router-dom';
-import { Box, Toolbar, CssBaseline } from '@mui/material'
 
-import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
 import Home from './Home';
 import Members from './Members';
 import Finance from './Finance';
@@ -12,9 +10,9 @@ import Settings from './Settings';
 
 export default function Main() {
   return (
-    <div>
-      <Navbar />
-      <div>
+    <div className="flex">
+      <Sidebar />
+      <div className="h-screen flex-1 p-5">
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="members" element={<Members />} />

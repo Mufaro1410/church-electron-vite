@@ -1,10 +1,12 @@
-const { MemberSchema } = require('../schemas/memberSchema');
+const MemberSchema = require('../../api/schemas/memberSchema').MemberSchema;
 
 // Creating table
 const createMembersTable = async () => {
   const res = await MemberSchema.sync();
   return res;
 };
+
+// createMembersTable()
 
 // Dropping table
 const dropMembersTable = async () => {
@@ -87,7 +89,7 @@ const removeMember = async (id) => {
   }
 };
 
-module.exports = {
+export {
   createMembersTable,
   dropMembersTable,
   readMembers,

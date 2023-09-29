@@ -16,12 +16,15 @@ export default function Signup(){
     const handleSubmit = (e)=>{
         e.preventDefault();
         console.log(signupState)
-        createAccount()
+        createUser()
         setSignupState(fieldsState)
     }
 
     //handle Signup API Integration here
-    const createAccount=()=>{}
+    const createUser = async () => {
+        const res = await window.electronAPI.createNewUser(signupState)
+        alert(`${res.username} created`)
+    }
 
     return(
         <form className="mt-8 space-y-6" onSubmit = {handleSubmit}>

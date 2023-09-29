@@ -1,8 +1,10 @@
-const { Sequelize } = require('sequelize');
+// import { Sequelize } from 'sequelize'
+const { Sequelize } = require('sequelize')
 
 // Creating a db instance
 const sequelize = new Sequelize({
   dialect: 'sqlite',
+  // dialectModule: 'sqlite3',
   storage: './church.db',
 });
 
@@ -17,4 +19,6 @@ const sequelize = new Sequelize({
 
 // testConnection()
 
-module.exports = sequelize;
+// sequelize.sync().then(() => console.log('db is ready')).catch((err) => console.log(err))
+
+module.exports.db = sequelize

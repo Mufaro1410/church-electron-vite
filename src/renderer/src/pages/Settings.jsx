@@ -1,21 +1,19 @@
-import '../App.css';
-// import Users from 'renderer/components/Users';
-// import Membership from 'renderer/components/Membership';
-// import MaritalStatus from 'renderer/components/MaritalStatus';
-// import Society from 'renderer/components/Society';
-// import Section from 'renderer/components/Section';
-// import AddMembers from 'renderer/components/AddMembers';
+import Users from '../components/Users';
+import Membership from '../components/Membership';
+import MaritalStatus from '../components/MaritalStatus';
+import Society from '../components/Society';
+import Section from '../components/Section';
+import AddMembers from '../components/AddMembers';
 
 export default function Settings() {
   return (
     <div>
-      <h1>Settings Page</h1>
-      {/* <Users />
+      <Users />
       <Membership />
       <MaritalStatus />
       <Society />
       <Section />
-      <AddMembers /> */}
+      <AddMembers />
     </div>
   );
 }

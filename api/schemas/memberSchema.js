@@ -1,10 +1,8 @@
-const { DataTypes } = require('sequelize');
-const db = require('../dbConfig');
+const { DataTypes } = require('sequelize')
+const sequelize = require('../../api/dbConfig').db;
 
 // Members schema
-const MemberSchema = db.define(
-  'member',
-  {
+const MemberSchema = sequelize.define('member', {
     // Model attributes are defined here
     firstName: {
       type: DataTypes.STRING,
@@ -22,22 +20,6 @@ const MemberSchema = db.define(
       type: DataTypes.DATE,
       allowNull: true,
     },
-    // section: {
-    //     type: DataTypes.NUMBER,
-    //     allowNull: false
-    // },
-    // maritalStatus: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false
-    // },
-    // membership: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false
-    // },
-    // society: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false
-    // },
     address: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -55,7 +37,7 @@ const MemberSchema = db.define(
   }
 );
 
-const MaritalStatusSchema = db.define(
+const MaritalStatusSchema = sequelize.define(
   'maritalStatus',
   {
     // Model attributes are defined here
@@ -69,7 +51,7 @@ const MaritalStatusSchema = db.define(
   }
 );
 
-const MembershipSchema = db.define(
+const MembershipSchema = sequelize.define(
   'membership',
   {
     // Model attributes are defined here
@@ -83,7 +65,7 @@ const MembershipSchema = db.define(
   }
 );
 
-const SocietySchema = db.define(
+const SocietySchema = sequelize.define(
   'society',
   {
     // Model attributes are defined here
@@ -97,7 +79,7 @@ const SocietySchema = db.define(
   }
 );
 
-const SectionSchema = db.define(
+const SectionSchema = sequelize.define(
   'section',
   {
     // Model attributes are defined here

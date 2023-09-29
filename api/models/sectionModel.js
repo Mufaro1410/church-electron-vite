@@ -1,5 +1,5 @@
 // const sequelize = require('../dbConfig')
-const { SectionSchema } = require('../schemas/memberSchema')
+const SectionSchema = require('../../api/schemas/memberSchema').SectionSchema;
 
 // Creating table
 const createSectionTable = async () => {
@@ -74,8 +74,7 @@ const removeSection = async (id) => {
         return error
     }
 }
-
-module.exports = {
+export {
     createSectionTable,
     dropSectionTable,
     addSection,

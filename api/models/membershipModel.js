@@ -1,5 +1,5 @@
 // const sequelize = require('../dbConfig')
-const { MembershipSchema } = require('../schemas/memberSchema');
+const MembershipSchema = require('../../api/schemas/memberSchema').MembershipSchema;
 
 // Creating table
 const createMembershipTable = async () => {
@@ -74,7 +74,7 @@ const removeMembership = async (id) => {
   }
 };
 
-module.exports = {
+export {
   createMembershipTable,
   dropMembershipTable,
   addMembership,

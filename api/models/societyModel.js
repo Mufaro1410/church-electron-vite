@@ -1,5 +1,5 @@
 // const sequelize = require('../dbConfig')
-const { SocietySchema } = require('../schemas/memberSchema')
+const SocietySchema = require('../../api/schemas/memberSchema').SocietySchema;
 
 // Creating table
 const createSocietyTable = async () => {
@@ -74,8 +74,7 @@ const removeSociety = async (id) => {
         return error
     }
 }
-
-module.exports = {
+export {
     createSocietyTable,
     dropSocietyTable,
     addSociety,
