@@ -41,6 +41,7 @@ electron.contextBridge.exposeInMainWorld("electronAPI", {
   getSections: () => electron.ipcRenderer.invoke("getAllSections"),
   getSection: (id) => electron.ipcRenderer.invoke("getSection", id),
   updateSection: (id, data) => electron.ipcRenderer.invoke("updateSection", id, data),
-  deleteSection: (id) => electron.ipcRenderer.invoke("deleteSection", id)
-  // for homepage
+  deleteSection: (id) => electron.ipcRenderer.invoke("deleteSection", id),
+  // for homepage (Statistics)
+  statistics: () => electron.ipcRenderer.invoke("statistics")
 });

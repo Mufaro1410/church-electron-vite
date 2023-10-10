@@ -1,5 +1,5 @@
 import { UserSchema } from '../schemas/userSchema';
-import { passwordEncrpt } from '../../src/renderer/src/assets/js/login';
+import { passwordEncrpt } from '../../src/renderer/assets/js/login';
 
 const createUserTable = async () => {
   const res = await UserSchema.sync();

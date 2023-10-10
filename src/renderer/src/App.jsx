@@ -6,7 +6,7 @@ import SignupPage from './pages/Signup.jsx';
 function App() {
 
   return (
-    <div className="box-border m-0 p-0">
+    <div className="min-h-screen flex sm:flex-col">
       <div>
         <BrowserRouter>
           <Routes>

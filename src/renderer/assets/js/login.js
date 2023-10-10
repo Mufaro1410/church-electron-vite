@@ -1,5 +1,5 @@
 // const sequelize = require('../../api/dbConfig')
-import { UserSchema } from '../../../../../api/schemas/userSchema'
+import { UserSchema } from '../../../../api/schemas/userSchema'
 import bcryptjs from 'bcryptjs'
 
 const login = async (data) => {

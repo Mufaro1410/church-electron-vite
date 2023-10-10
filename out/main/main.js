@@ -117,10 +117,10 @@ const removeUser = async (id) => {
     return error;
   }
 };
-const MemberSchema = require("../../api/schemas/memberSchema").MemberSchema;
+const MemberSchema$1 = require("../../api/schemas/memberSchema").MemberSchema;
 const addMembers = async (data) => {
   try {
-    await MemberSchema.bulkCreate(data);
+    await MemberSchema$1.bulkCreate(data);
     return { message: "bulk creation successful" };
   } catch (error) {
     console.log(error);
@@ -129,7 +129,7 @@ const addMembers = async (data) => {
 };
 const addMember = async (data) => {
   try {
-    const res = await MemberSchema.create(data);
+    const res = await MemberSchema$1.create(data);
     return res.toJSON();
   } catch (error) {
     console.log(error);
@@ -138,7 +138,7 @@ const addMember = async (data) => {
 };
 const readMembers = async () => {
   try {
-    const res = await MemberSchema.findAll({
+    const res = await MemberSchema$1.findAll({
       include: { all: true }
     });
     const data = res.map((user) => user.dataValues);
@@ -149,7 +149,7 @@ const readMembers = async () => {
 };
 const readMember = async (id) => {
   try {
-    const member = await MemberSchema.findByPk(id);
+    const member = await MemberSchema$1.findByPk(id);
     if (!member) {
       return { message: "Member not found" };
     }
@@ -160,7 +160,7 @@ const readMember = async (id) => {
 };
 const patchMember = async (id, data) => {
   try {
-    const member = await MemberSchema.findByPk(id);
+    const member = await MemberSchema$1.findByPk(id);
     if (!member) {
       return { message: "Member not found" };
     }
@@ -173,7 +173,7 @@ const patchMember = async (id, data) => {
 };
 const removeMember = async (id) => {
   try {
-    const member = await MemberSchema.findByPk(id);
+    const member = await MemberSchema$1.findByPk(id);
     if (!member) {
       return { message: "Member not found" };
     }
@@ -183,10 +183,10 @@ const removeMember = async (id) => {
     return error;
   }
 };
-const MaritalStatusSchema = require("../../api/schemas/memberSchema").MaritalStatusSchema;
+const MaritalStatusSchema$1 = require("../../api/schemas/memberSchema").MaritalStatusSchema;
 const addMaritalStatus = async (data) => {
   try {
-    const res = await MaritalStatusSchema.create(data);
+    const res = await MaritalStatusSchema$1.create(data);
     return res.toJSON();
   } catch (error) {
     return error.toJSON();
@@ -194,7 +194,7 @@ const addMaritalStatus = async (data) => {
 };
 const getMaritalStatuses = async () => {
   try {
-    const res = await MaritalStatusSchema.findAll();
+    const res = await MaritalStatusSchema$1.findAll();
     const data = res.map((status) => status.dataValues);
     return data;
   } catch (error) {
@@ -203,7 +203,7 @@ const getMaritalStatuses = async () => {
 };
 const getMaritalStatus = async (id) => {
   try {
-    const status = await MaritalStatusSchema.findByPk(id);
+    const status = await MaritalStatusSchema$1.findByPk(id);
     if (!status) {
       return { message: "Status not found" };
     }
@@ -214,7 +214,7 @@ const getMaritalStatus = async (id) => {
 };
 const updateMaritalStatus = async (id, data) => {
   try {
-    const status = await MaritalStatusSchema.findByPk(id);
+    const status = await MaritalStatusSchema$1.findByPk(id);
     if (!status) {
       return { message: "Status not found" };
     }
@@ -227,7 +227,7 @@ const updateMaritalStatus = async (id, data) => {
 };
 const removeMaritalStatus = async (id) => {
   try {
-    const status = await MaritalStatusSchema.findByPk(id);
+    const status = await MaritalStatusSchema$1.findByPk(id);
     if (!status) {
       return { message: "Status not found" };
     }
@@ -237,10 +237,10 @@ const removeMaritalStatus = async (id) => {
     return error;
   }
 };
-const MembershipSchema = require("../../api/schemas/memberSchema").MembershipSchema;
+const MembershipSchema$1 = require("../../api/schemas/memberSchema").MembershipSchema;
 const addMembership = async (data) => {
   try {
-    const res = await MembershipSchema.create(data);
+    const res = await MembershipSchema$1.create(data);
     return res.toJSON();
   } catch (error) {
     console.log(error);
@@ -249,7 +249,7 @@ const addMembership = async (data) => {
 };
 const getMemberships = async () => {
   try {
-    const res = await MembershipSchema.findAll();
+    const res = await MembershipSchema$1.findAll();
     const data = res.map((membership) => membership.dataValues);
     return data;
   } catch (error) {
@@ -258,7 +258,7 @@ const getMemberships = async () => {
 };
 const getMembership = async (id) => {
   try {
-    const membership = await MembershipSchema.findByPk(id);
+    const membership = await MembershipSchema$1.findByPk(id);
     if (!membership) {
       return { message: "Membership not found" };
     }
@@ -269,7 +269,7 @@ const getMembership = async (id) => {
 };
 const updateMembership = async (id, data) => {
   try {
-    const membership = await MembershipSchema.findByPk(id);
+    const membership = await MembershipSchema$1.findByPk(id);
     if (!membership) {
       return { message: "Membership not found" };
     }
@@ -282,7 +282,7 @@ const updateMembership = async (id, data) => {
 };
 const removeMembership = async (id) => {
   try {
-    const membership = await MembershipSchema.findByPk(id);
+    const membership = await MembershipSchema$1.findByPk(id);
     if (!membership) {
       return { message: "Membership not found" };
     }
@@ -291,10 +291,10 @@ const removeMembership = async (id) => {
     return error;
   }
 };
-const SocietySchema = require("../../api/schemas/memberSchema").SocietySchema;
+const SocietySchema$1 = require("../../api/schemas/memberSchema").SocietySchema;
 const addSociety = async (data) => {
   try {
-    const res = await SocietySchema.create(data);
+    const res = await SocietySchema$1.create(data);
     return res.toJSON();
   } catch (error) {
     return error.toJSON();
@@ -302,7 +302,7 @@ const addSociety = async (data) => {
 };
 const getSocieties = async () => {
   try {
-    const res = await SocietySchema.findAll();
+    const res = await SocietySchema$1.findAll();
     const data = res.map((society) => society.dataValues);
     return data;
   } catch (error) {
@@ -311,7 +311,7 @@ const getSocieties = async () => {
 };
 const getSociety = async (id) => {
   try {
-    const society = await SocietySchema.findByPk(id);
+    const society = await SocietySchema$1.findByPk(id);
     if (!society) {
       return { message: "Society not found" };
     }
@@ -322,7 +322,7 @@ const getSociety = async (id) => {
 };
 const updateSociety = async (id, data) => {
   try {
-    const society = await SocietySchema.findByPk(id);
+    const society = await SocietySchema$1.findByPk(id);
     if (!society) {
       return { message: "Society not found" };
     }
@@ -335,7 +335,7 @@ const updateSociety = async (id, data) => {
 };
 const removeSociety = async (id) => {
   try {
-    const society = await SocietySchema.findByPk(id);
+    const society = await SocietySchema$1.findByPk(id);
     if (!society) {
       return { message: "Society not found" };
     }
@@ -345,10 +345,10 @@ const removeSociety = async (id) => {
     return error;
   }
 };
-const SectionSchema = require("../../api/schemas/memberSchema").SectionSchema;
+const SectionSchema$1 = require("../../api/schemas/memberSchema").SectionSchema;
 const addSection = async (data) => {
   try {
-    const res = await SectionSchema.create(data);
+    const res = await SectionSchema$1.create(data);
     return res.toJSON();
   } catch (error) {
     return error.toJSON();
@@ -356,7 +356,7 @@ const addSection = async (data) => {
 };
 const getSections = async () => {
   try {
-    const res = await SectionSchema.findAll();
+    const res = await SectionSchema$1.findAll();
     const data = res.map((section) => section.dataValues);
     return data;
   } catch (error) {
@@ -365,7 +365,7 @@ const getSections = async () => {
 };
 const getSection = async (id) => {
   try {
-    const section = await SectionSchema.findByPk(id);
+    const section = await SectionSchema$1.findByPk(id);
     if (!section) {
       return { message: "Section not found" };
     }
@@ -376,7 +376,7 @@ const getSection = async (id) => {
 };
 const updateSection = async (id, data) => {
   try {
-    const section = await SectionSchema.findByPk(id);
+    const section = await SectionSchema$1.findByPk(id);
     if (!section) {
       return { message: "Section not found" };
     }
@@ -389,7 +389,7 @@ const updateSection = async (id, data) => {
 };
 const removeSection = async (id) => {
   try {
-    const section = await SectionSchema.findByPk(id);
+    const section = await SectionSchema$1.findByPk(id);
     if (!section) {
       return { message: "Section not found" };
     }
@@ -399,6 +399,130 @@ const removeSection = async (id) => {
     return error;
   }
 };
+const { MaritalStatusSchema, MembershipSchema, MemberSchema, SocietySchema, SectionSchema } = require("../../api/schemas/memberSchema");
+let statisticsData = [];
+function processStats(name, value) {
+  statisticsData.push({ "name": name, "count": value });
+  return;
+}
+const total_members = async () => {
+  try {
+    const total_members2 = await MemberSchema.findAndCountAll({});
+    processStats("Total Church Members", total_members2.count);
+    return;
+  } catch (error) {
+    return error;
+  }
+};
+const mumcStats = async () => {
+  try {
+    const total_mumc_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: ["mumc-f", "mumc-p"] } }
+      ]
+    });
+    processStats("Total MUMC Members", total_mumc_members.count);
+    const total_mumc_full_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "mumc-f" } }
+      ]
+    });
+    processStats("Total Full MUMC Members", total_mumc_full_members.count);
+    const total_mumc_probation_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "mumc-p" } }
+      ]
+    });
+    processStats("Total Probation MUMC Members", total_mumc_probation_members.count);
+    return;
+  } catch (error) {
+    return error;
+  }
+};
+const rrwStats = async () => {
+  try {
+    const total_rrw_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: ["rrw-f", "rrw-p"] } }
+      ]
+    });
+    processStats("Total RRW Members", total_rrw_members.count);
+    const total_rrw_full_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "rrw-f" } }
+      ]
+    });
+    processStats("Total Full RRW Members", total_rrw_full_members.count);
+    const total_rrw_probation_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "rrw-p" } }
+      ]
+    });
+    processStats("Total Probation RRW Members", total_rrw_probation_members.count);
+    return;
+  } catch (error) {
+    return error;
+  }
+};
+const umyfStats = async () => {
+  try {
+    const total_umyf_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: ["umyf-f", "umyf-p"] } }
+      ]
+    });
+    processStats("Total UMYF Members", total_umyf_members.count);
+    const total_umyf_full_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "umyf-f" } }
+      ]
+    });
+    processStats("Total Full UMYF Members", total_umyf_full_members.count);
+    const total_umyf_probation_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "umyf-p" } }
+      ]
+    });
+    processStats("Total Probation UMYF Members", total_umyf_probation_members.count);
+    return;
+  } catch (error) {
+    return error;
+  }
+};
+const jcStats = async () => {
+  try {
+    const total_jc_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: ["jc-b", "jc-nb"] } }
+      ]
+    });
+    processStats("Total JC Members", total_jc_members.count);
+    const total_jc_b_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "jc-b" } }
+      ]
+    });
+    processStats("Total Baptised JC Members", total_jc_b_members.count);
+    const total_jc_nb_members = await MemberSchema.findAndCountAll({
+      include: [
+        { model: SocietySchema, where: { title: "jc-nb" } }
+      ]
+    });
+    processStats("Total Not Baptised JC Members", total_jc_nb_members.count);
+    return;
+  } catch (error) {
+    return error;
+  }
+};
+async function getStats() {
+  statisticsData = [];
+  await total_members();
+  await mumcStats();
+  await rrwStats();
+  await umyfStats();
+  await jcStats();
+  return statisticsData;
+}
 const sequelize = require("../../api/dbConfig").db;
 sequelize.sync().then(() => console.log("db is ready")).catch((err) => console.log(err));
 let mainWindow;
@@ -519,4 +643,7 @@ electron.ipcMain.handle("updateSection", async (event, id, data) => {
 });
 electron.ipcMain.handle("deleteSection", async (event, id) => {
   return removeSection(id);
+});
+electron.ipcMain.handle("statistics", async () => {
+  return getStats();
 });

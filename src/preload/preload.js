@@ -51,5 +51,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
   updateSection: (id, data) =>
     ipcRenderer.invoke('updateSection', id, data),
   deleteSection: (id) => ipcRenderer.invoke('deleteSection', id),
-  // for homepage
+  // for homepage (Statistics)
+  statistics: () => ipcRenderer.invoke('statistics')
 });

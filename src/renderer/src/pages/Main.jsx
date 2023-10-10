@@ -10,9 +10,9 @@ import Settings from './Settings';
 
 export default function Main() {
   return (
-    <div className="flex">
+    <div className="relative md:flex flex-grow">
       <Sidebar />
-      <div className="h-screen flex-1 p-5">
+      <div className="h-screen flex-1 p-5 relative">
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="members" element={<Members />} />

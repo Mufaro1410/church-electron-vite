@@ -9,6 +9,7 @@ import { addMaritalStatus, getMaritalStatuses, getMaritalStatus, updateMaritalSt
 import { addMembership, getMemberships, getMembership, updateMembership, removeMembership } from '../../api/models/membershipModel'
 import { addSociety, getSocieties, getSociety, updateSociety, removeSociety } from '../../api/models/societyModel'
 import { addSection, getSections, getSection, updateSection, removeSection } from '../../api/models/sectionModel'
+import { getStats } from '../../api/reports/statistics'
 
 sequelize.sync().then(() => console.log('db is ready')).catch((err) => console.log(err))
 
@@ -72,6 +73,7 @@ ipcMain.handle('addMembers', async (event, data) => {
 });
 
 ipcMain.handle('addMember', async (event, data) => {
+  // console.log(data);
   return addMember(data);
 });
 
@@ -174,3 +176,7 @@ ipcMain.handle('updateSection', async (event, id, data) => {
 ipcMain.handle('deleteSection', async (event, id) => {
   return removeSection(id);
 });
+
+ipcMain.handle('statistics', async () => {
+  return getStats()
+})
