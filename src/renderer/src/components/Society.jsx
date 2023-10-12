@@ -8,6 +8,7 @@ function Society() {
   const getSocieties = async () => {
     const res = await window.electronAPI.getSocieties();
     setSocieties(res);
+    localStorage.setItem('society', JSON.stringify(res))
   };
 
   useEffect(() => {

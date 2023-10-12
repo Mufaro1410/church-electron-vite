@@ -42,14 +42,20 @@ export default function Members() {
     setMemberDetails(...[memberInfo[0]]);
   };
 
+  // function dateHandler(dob) {
+  //   console.log(memberDetails);
+  //   // let dateVar = dob
+  //   return new Date(dob).toLocaleDateString('sv-SE').replaceAll('-','/');
+  // }
+
   return (
     <div className='grid grid-cols-2'>
       <div className='justify-center m-2 border p-4 rounded'>
         <div className="md:flex mb-4 space-x-6 shadow rounded p-4">
-          <input type="search" onChange={searchMember} className="border-2 rounded-lg p-2 flex-1" placeholder="search..." />
+          <input type="search" onChange={searchMember} className="border-2 rounded-lg p-2 flex-1" placeholder="search by surname..." />
           <button type="button" name="addMember" onClick={() => setAddMember(!addMember)} className='bg-sky-500 rounded-lg p-2 md:w-fit transition delay-150 hover:scale-105'>Add member</button>
         </div>
-        {addMember && <Modal title='Add Member' btnName='Add member' closeModal={() => setAddMember(!addMember)}/>}
+        {addMember && <Modal title='Add Member' btnName='Add member' closeBtn='Close' closeModal={() => setAddMember(!addMember)}/>}
         <div className=" shadow rounded p-4">
           <h1 className='font-semibold text-3xl text-primary-600 underline'>Members</h1>
           <div className='overflow-auto'>
@@ -59,7 +65,7 @@ export default function Members() {
                   <li
                     key={item.id}
                     value={item.id}
-                    className="cursor-pointer text-2xl"
+                    className="cursor-pointer text-2xl bg-sky-300 my-1 pl-4 rounded-sm"
                     onClick={selectMember}
                   >
                     {`${item.id} ${item.lastName} ${item.firstName}`}
@@ -81,7 +87,7 @@ export default function Members() {
                 Edit
               </button>
             </div>
-            {editMember && <Modal title='Edit Member' btnName='Submit changes' memberDetails={memberDetails} closeModal={() => setEditMember(!editMember)}/>}
+            {editMember && <Modal title='Edit Member' btnName='Submit changes' closeBtn='Close' memberDetails={memberDetails} closeModal={() => setEditMember(!editMember)}/>}
             <div className='shadow p-4 rounded mb-4'>
               <h1 className='font-semibold text-3xl text-primary-600 underline'>Member details</h1>
               {/* <h1>ID: {memberDetails.id}</h1> */}
@@ -89,6 +95,7 @@ export default function Members() {
               <h1>Surname: {memberDetails.lastName}</h1>
               <h1>Gender: {memberDetails.gender}</h1>
               {/* <h1>DOB: {memberDetails.dob}</h1> */}
+              {/* {console.log(memberDetails.dob)} */}
               <h1>Address: {memberDetails.address}</h1>
               <h1>Telephone: {memberDetails.telephone}</h1>
               <h1>Email: {memberDetails.email}</h1>

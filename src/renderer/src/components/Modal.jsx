@@ -1,30 +1,49 @@
-import Input from "./Input";
 import { memberFields } from '../constants/formFields'
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Input from "./Input";
+import Dropdown from './Dropdown';
 
 const fields = memberFields
 const fieldsState = {}
 memberFields.forEach(field => fieldsState[field.id] = '')
 
-export default function Modal( { title, btnName, closeModal} ) {
-  const [memberState, setMemberState] = useState(fieldsState)
+export default function Modal( { title, btnName, closeBtn, memberDetails, closeModal} ) {
+  const [memberState, setMemberState] = useState(!memberDetails ? fieldsState : memberDetails)
+  const [maritalStatus, setMaritalStatus] = useState(JSON.parse(localStorage.getItem('maritalStatus')))
+  const [membership, setMembership] = useState(JSON.parse(localStorage.getItem('membership')))
+  const [society, setSociety] = useState(JSON.parse(localStorage.getItem('society')))
+  const [section, setSection] = useState(JSON.parse(localStorage.getItem('section')))
+  
+  // useEffect(() => console.log(localStorage.getItem('maritalStatus')))
+
+  const options = {maritalStatus: maritalStatus, membership: membership, society: society, section: section}
 
   const handleChange = (e) => {
-    setMemberState({...memberState, [e.target.id]: e.target.value})
+    const name = e.target.id
+    const value = e.target.value
+    setMemberState({...memberState, [name]: value})
+    // console.log(memberState);
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    // const list = ['maritalStatus', 'membership', 'society', 'section']
+    // const data = {...memberState}
+    // list.forEach(item => {
+    //   // console.log(item, data[item], Number(data[item]));
+    //   return {...data, [item]: Number(data.item)}
+    // })
+    // console.log(data);
+
     let res = await window.electronAPI.createNewMember(memberState)
     alert(`${res} created`)
     closeModal()
   }
 
+
   return (
     <>
-      <div
-        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-      >
+      <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
         <div className="relative w-3/5 my-6 mx-auto max-w-3xl">
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -47,18 +66,44 @@ export default function Modal( { title, btnName, closeModal} ) {
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
                 <div className="-space-y-px">
                   {fields.map(field => (
-                      <Input
+                      (field.id ===  'gender' | field.id === 'maritalStatus' | field.id === 'membership' | field.id === 'society' | field.id === 'section') ? (
+                        <Dropdown
                           key={field.id}
-                          handleChange={handleChange}
                           value={memberState[field.id]}
-                          labelText={field.labelText}
-                          labelFor={field.labelFor}
+                          handleChange={handleChange}
                           id={field.id}
-                          name={field.name}
-                          type={field.type}
-                          isRequired={field.isRequired}
-                          placeholder={field.placeholder}
-                      />)
+                          options={field.options ? field.options : options[field.id]}
+                        />
+                      ) : (
+                        (field.id === 'dob') ? (
+                          <Input
+                              key={field.id}
+                              handleChange={handleChange}
+                              value={memberState[field.id]}
+                              labelText={field.labelText}
+                              labelFor={field.labelFor}
+                              id={field.id}
+                              name={field.name}
+                              type={field.type}
+                              isRequired={field.isRequired}
+                              placeholder={field.placeholder}
+                          />
+                        ) : (
+                          <Input
+                              key={field.id}
+                              handleChange={handleChange}
+                              value={memberState[field.id]}
+                              labelText={field.labelText}
+                              labelFor={field.labelFor}
+                              id={field.id}
+                              name={field.name}
+                              type={field.type}
+                              isRequired={field.isRequired}
+                              placeholder={field.placeholder}
+                          />
+                        )
+                      )
+                    )
                   )}
                 </div>
                 {/*footer*/}
@@ -68,7 +113,7 @@ export default function Modal( { title, btnName, closeModal} ) {
                     type="button"
                     onClick={closeModal}
                   >
-                    Close
+                    {closeBtn}
                   </button>
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"

@@ -95,7 +95,8 @@ const memberFields = [
         autoComplete:"gender",
         isRequired:true,
         placeholder:"Gender",
-        autoFocus: true
+        autoFocus: true,
+        options: [{id: 1, title: 'gender'}, {id: 2, title: 'male'}, {id: 3, title: 'female'}]
     },{
         labelText:"DOB",
         labelFor:"dob",
@@ -133,7 +134,7 @@ const memberFields = [
         name:"email",
         type:"text",
         autoComplete:"email",
-        isRequired:true,
+        isRequired:false,
         placeholder:"Email",
         autoFocus: true
     },{
@@ -145,7 +146,8 @@ const memberFields = [
         autoComplete:"marital status",
         isRequired:true,
         placeholder:"Marital Status",
-        autoFocus: true
+        autoFocus: true,
+        // options: [JSON.parse(localStorage.getItem('maritalStatus'))]
     },{
         labelText:"Membership",
         labelFor:"membership",

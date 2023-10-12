@@ -8,6 +8,7 @@ function MaritalStatus() {
   const getMaritalStatuses = async () => {
     const res = await window.electronAPI.getMaritalStatuses();
     setMaritalStatuses(res);
+    localStorage.setItem('maritalStatus', JSON.stringify(res))
   };
 
   useEffect(() => {

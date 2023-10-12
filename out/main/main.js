@@ -129,6 +129,7 @@ const addMembers = async (data) => {
 };
 const addMember = async (data) => {
   try {
+    console.log(data);
     const res = await MemberSchema$1.create(data);
     return res.toJSON();
   } catch (error) {

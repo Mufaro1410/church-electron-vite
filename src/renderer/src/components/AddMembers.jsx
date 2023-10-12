@@ -1,6 +1,7 @@
 // import { readFile } from 'fs';
 import { useState } from 'react';
 import * as xlsx from 'xlsx';
+import dateHandler from '../../assets/js/dateHandler';
 
 function AddMembers() {
   const [fileJSON, setFileJSON] = useState([]);
@@ -15,8 +16,13 @@ function AddMembers() {
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
         const jsonData = xlsx.utils.sheet_to_json(worksheet);
+        // jsonData.map(obj => {
+        //   let dob = obj['dob']
+        //   console.log(dob);
+        //   return {...obj, dob: dateHandler(dob)}
+        // })
         setFileJSON(jsonData);
-        // console.log(jsonData);
+        // console.log(jsonData[0]);
       };
       reader.readAsArrayBuffer(e.target.files[0]);
     }

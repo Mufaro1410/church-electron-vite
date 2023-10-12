@@ -8,6 +8,7 @@ function Section() {
   const getSections = async () => {
     const res = await window.electronAPI.getSections();
     setSections(res);
+    localStorage.setItem('section', JSON.stringify(res))
   };
 
   useEffect(() => {

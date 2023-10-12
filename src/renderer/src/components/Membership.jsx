@@ -8,6 +8,7 @@ function Membership() {
   const getMemberships = async () => {
     const res = await window.electronAPI.getMemberships();
     setMemberships(res);
+    localStorage.setItem('membership', JSON.stringify(res))
   };
 
   useEffect(() => {
