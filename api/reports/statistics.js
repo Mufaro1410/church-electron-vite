@@ -21,21 +21,21 @@ const mumcStats = async () => {
     try {
       const total_mumc_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: {title: ['mumc-f', 'mumc-p'] }}
+          { model: SocietySchema, where: {title: ['mumc-full', 'mumc-probation'] }}
         ],
       })
       processStats('Total MUMC Members', total_mumc_members.count)
 
       const total_mumc_full_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: { title: 'mumc-f' } }
+          { model: SocietySchema, where: { title: 'mumc-full' } }
         ],
       })
       processStats('Total Full MUMC Members', total_mumc_full_members.count)
 
       const total_mumc_probation_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: { title: 'mumc-p' } }
+          { model: SocietySchema, where: { title: 'mumc-probation' } }
         ],
       })
       processStats('Total Probation MUMC Members', total_mumc_probation_members.count)
@@ -50,21 +50,21 @@ const rrwStats = async () => {
     try {
       const total_rrw_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: {title: ['rrw-f', 'rrw-p'] }}
+          { model: SocietySchema, where: {title: ['rrw-f', 'rrw-probation'] }}
         ],
       })
       processStats('Total RRW Members', total_rrw_members.count)
 
       const total_rrw_full_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: { title: 'rrw-f' } }
+          { model: SocietySchema, where: { title: 'rrw-full' } }
         ],
       })
       processStats('Total Full RRW Members', total_rrw_full_members.count)
 
       const total_rrw_probation_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: { title: 'rrw-p' } }
+          { model: SocietySchema, where: { title: 'rrw-probation' } }
         ],
       })
       processStats('Total Probation RRW Members', total_rrw_probation_members.count)
@@ -79,21 +79,21 @@ const umyfStats = async () => {
     try {
       const total_umyf_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: {title: ['umyf-f', 'umyf-p'] }}
+          { model: SocietySchema, where: {title: ['umyf-full', 'umyf-probation'] }}
         ],
       })
       processStats('Total UMYF Members', total_umyf_members.count)
 
       const total_umyf_full_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: { title: 'umyf-f' } }
+          { model: SocietySchema, where: { title: 'umyf-full' } }
         ],
       })
       processStats('Total Full UMYF Members', total_umyf_full_members.count)
 
       const total_umyf_probation_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: { title: 'umyf-p' } }
+          { model: SocietySchema, where: { title: 'umyf-probation' } }
         ],
       })
       processStats('Total Probation UMYF Members', total_umyf_probation_members.count)

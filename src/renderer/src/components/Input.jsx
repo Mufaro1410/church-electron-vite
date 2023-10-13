@@ -14,12 +14,12 @@ export default function Input({
     }) {
     return(
         <div className="my-5">
-            <label htmlFor={labelFor} className="sr-only">
+            <label htmlFor={labelFor} > {/* className="sr-only" */}
                 {labelText}
             </label>
             <input
                 onChange={handleChange}
-                value={value}
+                value={value ? value : ''}
                 id={id}
                 name={name}
                 type={type}

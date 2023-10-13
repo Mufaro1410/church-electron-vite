@@ -2,6 +2,7 @@ import { memberFields } from '../constants/formFields'
 import { useEffect, useState } from "react";
 import Input from "./Input";
 import Dropdown from './Dropdown';
+import dateHandler from '../../assets/js/dateHandler';
 
 const fields = memberFields
 const fieldsState = {}
@@ -16,7 +17,7 @@ export default function Modal( { title, btnName, closeBtn, memberDetails, closeM
   
   // useEffect(() => console.log(localStorage.getItem('maritalStatus')))
 
-  const options = {maritalStatus: maritalStatus, membership: membership, society: society, section: section}
+  const options = {maritalStatusId: maritalStatus, membershipId: membership, societyId: society, sectionId: section}
 
   const handleChange = (e) => {
     const name = e.target.id
@@ -27,16 +28,15 @@ export default function Modal( { title, btnName, closeBtn, memberDetails, closeM
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // const list = ['maritalStatus', 'membership', 'society', 'section']
-    // const data = {...memberState}
-    // list.forEach(item => {
-    //   // console.log(item, data[item], Number(data[item]));
-    //   return {...data, [item]: Number(data.item)}
-    // })
-    // console.log(data);
-
-    let res = await window.electronAPI.createNewMember(memberState)
-    alert(`${res} created`)
+    if (!memberState.id) {
+      // console.log('creating...');
+      const res = await window.electronAPI.createNewMember(memberState)
+      alert(`${res.lastName} ${res.firstName} created`)
+    } else {
+      // console.log('updating...');
+      let res = await window.electronAPI.updateMember(memberState.id, memberState)
+      alert(`${res.lastName} ${res.firstName} updated successfully`)
+    }
     closeModal()
   }
 
@@ -63,13 +63,15 @@ export default function Modal( { title, btnName, closeBtn, memberDetails, closeM
             </div>
             {/*body*/}
             <div className="relative p-6 flex-auto">
-              <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-2">
                 <div className="-space-y-px">
                   {fields.map(field => (
-                      (field.id ===  'gender' | field.id === 'maritalStatus' | field.id === 'membership' | field.id === 'society' | field.id === 'section') ? (
+                      (field.id ===  'gender' | field.id === 'maritalStatusId' | field.id === 'membershipId' | field.id === 'societyId' | field.id === 'sectionId') ? (
                         <Dropdown
                           key={field.id}
                           value={memberState[field.id]}
+                          labelFor={field.labelFor}
+                          labelText={field.labelText}
                           handleChange={handleChange}
                           id={field.id}
                           options={field.options ? field.options : options[field.id]}
@@ -79,7 +81,7 @@ export default function Modal( { title, btnName, closeBtn, memberDetails, closeM
                           <Input
                               key={field.id}
                               handleChange={handleChange}
-                              value={memberState[field.id]}
+                              value={(memberState[field.id])  ? dateHandler(memberState[field.id]) : undefined}
                               labelText={field.labelText}
                               labelFor={field.labelFor}
                               id={field.id}

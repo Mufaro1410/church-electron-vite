@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import Modal from '../components/Modal';
+import dateHander from '../../assets/js/dateHandler'
+import dateHandler from '../../assets/js/dateHandler';
 
 export default function Members() {
   const [members, setMembers] = useState([]);
@@ -42,10 +44,8 @@ export default function Members() {
     setMemberDetails(...[memberInfo[0]]);
   };
 
-  // function dateHandler(dob) {
-  //   console.log(memberDetails);
-  //   // let dateVar = dob
-  //   return new Date(dob).toLocaleDateString('sv-SE').replaceAll('-','/');
+  // function updateMemberList(name, value) {
+  //   setMembers({...members, [name]: value})
   // }
 
   return (
@@ -53,7 +53,9 @@ export default function Members() {
       <div className='justify-center m-2 border p-4 rounded'>
         <div className="md:flex mb-4 space-x-6 shadow rounded p-4">
           <input type="search" onChange={searchMember} className="border-2 rounded-lg p-2 flex-1" placeholder="search by surname..." />
-          <button type="button" name="addMember" onClick={() => setAddMember(!addMember)} className='bg-sky-500 rounded-lg p-2 md:w-fit transition delay-150 hover:scale-105'>Add member</button>
+          <button type="button" name="addMember" onClick={() => setAddMember(!addMember)} className='bg-sky-500 rounded-lg p-2 md:w-fit transition delay-150 hover:scale-105'>
+            Add member
+          </button>
         </div>
         {addMember && <Modal title='Add Member' btnName='Add member' closeBtn='Close' closeModal={() => setAddMember(!addMember)}/>}
         <div className=" shadow rounded p-4">
@@ -94,11 +96,10 @@ export default function Members() {
               <h1>Firstname: {memberDetails.firstName}</h1>
               <h1>Surname: {memberDetails.lastName}</h1>
               <h1>Gender: {memberDetails.gender}</h1>
-              {/* <h1>DOB: {memberDetails.dob}</h1> */}
-              {/* {console.log(memberDetails.dob)} */}
+              <h1>DOB: {dateHandler(memberDetails.dob)}</h1>
               <h1>Address: {memberDetails.address}</h1>
               <h1>Telephone: {memberDetails.telephone}</h1>
-              <h1>Email: {memberDetails.email}</h1>
+              <h1>Email: {memberDetails.email | undefined}</h1>
               <h1>
                 Marital Status: {memberDetails.maritalStatus.dataValues.title}
               </h1>

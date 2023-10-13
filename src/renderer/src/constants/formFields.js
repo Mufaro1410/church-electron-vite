@@ -124,7 +124,7 @@ const memberFields = [
         name:"telephone",
         type:"text",
         autoComplete:"telephone",
-        isRequired:true,
+        isRequired:false,
         placeholder:"Telephone",
         autoFocus: true
     },{
@@ -140,7 +140,7 @@ const memberFields = [
     },{
         labelText:"Marital Status",
         labelFor:"marital status",
-        id:"maritalStatus",
+        id:"maritalStatusId",
         name:"marital status",
         type:"text",
         autoComplete:"marital status",
@@ -151,7 +151,7 @@ const memberFields = [
     },{
         labelText:"Membership",
         labelFor:"membership",
-        id:"membership",
+        id:"membershipId",
         name:"membership",
         type:"text",
         autoComplete:"membership",
@@ -161,7 +161,7 @@ const memberFields = [
     },{
         labelText:"Society",
         labelFor:"society",
-        id:"society",
+        id:"societyId",
         name:"society",
         type:"text",
         autoComplete:"society",
@@ -171,7 +171,7 @@ const memberFields = [
     },{
         labelText:"Section",
         labelFor:"section",
-        id:"section",
+        id:"sectionId",
         name:"section",
         type:"text",
         autoComplete:"section",

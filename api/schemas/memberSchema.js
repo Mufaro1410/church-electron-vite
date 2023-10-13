@@ -30,6 +30,7 @@ const MemberSchema = sequelize.define('member', {
     },
     email: {
       type: DataTypes.STRING,
+      // allowNull: true
     },
   },
   {

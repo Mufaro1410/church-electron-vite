@@ -4,7 +4,7 @@ const { Sequelize } = require('sequelize')
 // Creating a db instance
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  // dialectModule: 'sqlite3',
+  omitNull: true,
   storage: './church.db',
 });
 

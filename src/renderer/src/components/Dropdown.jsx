@@ -3,12 +3,17 @@ const fixedInputClass="rounded-md appearance-none relative block w-full px-3 py-
 export default function Dropdown({
         value,
         id,
+        labelFor,
+        labelText,
         handleChange,
         options,
         customClass
     }) {
     return(
         <div className="my-5">
+            <label htmlFor={labelFor} > {/* className="sr-only" */}
+                {labelText}
+            </label>
             <select id={id} value={value} onChange={handleChange} className={fixedInputClass+customClass}>
                 {options.map((item) => (
                     (item.title === 'gender' | item.title === 'male' | item.title === 'female') ? (

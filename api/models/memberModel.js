@@ -31,6 +31,7 @@ const addMember = async (data) => {
   try {
     console.log(data);
     const res = await MemberSchema.create(data);
+    // console.log(res.toJSON());
     return res.toJSON();
   } catch (error) {
     console.log(error);
