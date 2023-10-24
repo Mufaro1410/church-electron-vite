@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { signupFields } from "../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
@@ -11,19 +12,23 @@ fields.forEach(field => fieldsState[field.id] = '');
 export default function Signup(){
     const [signupState, setSignupState] = useState(fieldsState);
 
+    const navigate = useNavigate();
+
     const handleChange = (e) => setSignupState({...signupState, [e.target.id]:e.target.value});
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log(signupState)
         createUser()
         setSignupState(fieldsState)
+        navigate('/login')
+        
     }
 
     //handle Signup API Integration here
     const createUser = async () => {
-        const res = await window.electronAPI.createNewUser(signupState)
-        alert(`${res.username} created`)
+        console.log(signupState);
+        // const res = await window.electronAPI.createNewUser(signupState)
+        // alert(`${res.username} created`)
     }
 
     return(
@@ -44,7 +49,7 @@ export default function Signup(){
                         placeholder={field.placeholder}
                 />
             )}
-            <FormAction text="Signup" />
+            <FormAction text="Proceed" />
             </div>
         </form>
     )

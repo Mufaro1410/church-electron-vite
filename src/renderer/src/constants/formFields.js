@@ -181,4 +181,48 @@ const memberFields = [
     },
 ]
 
-export {loginFields,signupFields, memberFields}
+const churchRegistrationFields = [
+    {
+        labelText:"ChurchName",
+        labelFor:"churchname",
+        id:"churchName",
+        name:"churchname",
+        type:"text",
+        autoComplete:"churchname",
+        isRequired:true,
+        placeholder:"ChurchName",
+        autoFocus: true
+    },{
+        labelText:"Address",
+        labelFor:"address",
+        id:"address",
+        name:"address",
+        type:"text",
+        autoComplete:"address",
+        isRequired:true,
+        placeholder:"Address",
+        autoFocus: true
+    },{
+        labelText:"Telephone",
+        labelFor:"telephone",
+        id:"telephone",
+        name:"telephone",
+        type:"text",
+        autoComplete:"telephone",
+        isRequired:true,
+        placeholder:"Telephone",
+        autoFocus: true,
+    },{
+        labelText:"Email",
+        labelFor:"email",
+        id:"email",
+        name:"email",
+        type:"email",
+        autoComplete:"email",
+        isRequired:false,
+        placeholder:"Email",
+        autoFocus: true
+    }
+]
+
+export {loginFields,signupFields, memberFields, churchRegistrationFields}

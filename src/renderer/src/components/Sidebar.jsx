@@ -9,7 +9,7 @@ export default function Sidebar() {
 
     
     const Menus = [
-        { title: "Home", src: "Chart_fill" },
+        { title: "Dashboard", src: "Chart_fill" },
         { title: "Members", src: "User" },
         { title: "Finance", src: "Chat", gap: false },
         { title: "Events ", src: "Calendar" },
@@ -20,7 +20,7 @@ export default function Sidebar() {
 
     function navigation(index, Menu) {
         setInd(index);
-        (Menu.title !== 'Logout') ? navigate(Menu.title.toLowerCase()) : navigate("/")
+        (Menu.title !== 'Logout') ? navigate(Menu.title.toLowerCase()) : navigate("/login")
     }
 
   return (

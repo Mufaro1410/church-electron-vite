@@ -20,6 +20,7 @@ function _interopNamespaceDefault(e) {
   return Object.freeze(n);
 }
 const path__namespace = /* @__PURE__ */ _interopNamespaceDefault(path);
+require("../../api/schemas/churchSchema");
 const sequelize$1 = require("../../api/dbConfig").db;
 const UserSchema = sequelize$1.define(
   "user",
@@ -129,7 +130,6 @@ const addMembers = async (data) => {
 };
 const addMember = async (data) => {
   try {
-    console.log(data);
     const res = await MemberSchema$1.create(data);
     return res.toJSON();
   } catch (error) {
@@ -444,7 +444,7 @@ const rrwStats = async () => {
   try {
     const total_rrw_members = await MemberSchema.findAndCountAll({
       include: [
-        { model: SocietySchema, where: { title: ["rrw-f", "rrw-probation"] } }
+        { model: SocietySchema, where: { title: ["rrw-full", "rrw-probation"] } }
       ]
     });
     processStats("Total RRW Members", total_rrw_members.count);
@@ -515,6 +515,70 @@ const jcStats = async () => {
     return error;
   }
 };
+const genderStats = async () => {
+  try {
+    const males = await MemberSchema.findAndCountAll({ where: { gender: "male" } });
+    processStats("Males", males.count);
+    const females = await MemberSchema.findAndCountAll({ where: { gender: "female" } });
+    processStats("Females", females.count);
+  } catch (error) {
+    return error;
+  }
+};
+const membershipStats = async () => {
+  try {
+    const full = await MemberSchema.findAndCountAll({
+      include: [
+        { model: MembershipSchema, where: { title: "full" } }
+      ]
+    });
+    processStats("Full Members", full.count);
+    const probation = await MemberSchema.findAndCountAll({
+      include: [
+        { model: MembershipSchema, where: { title: "probation" } }
+      ]
+    });
+    processStats("Probation Members", probation.count);
+  } catch (error) {
+    return error;
+  }
+};
+const maritalStats = async () => {
+  try {
+    const single = await MemberSchema.findAndCountAll({
+      include: [
+        { model: MaritalStatusSchema, where: { title: "single" } }
+      ]
+    });
+    processStats("Singles", single.count);
+    const married = await MemberSchema.findAndCountAll({
+      include: [
+        { model: MaritalStatusSchema, where: { title: "married" } }
+      ]
+    });
+    processStats("Married", married.count);
+    const divorced = await MemberSchema.findAndCountAll({
+      include: [
+        { model: MaritalStatusSchema, where: { title: "divorced" } }
+      ]
+    });
+    processStats("Divorced", divorced.count);
+    const widow = await MemberSchema.findAndCountAll({
+      include: [
+        { model: MaritalStatusSchema, where: { title: "widow" } }
+      ]
+    });
+    processStats("Widows", widow.count);
+    const widower = await MemberSchema.findAndCountAll({
+      include: [
+        { model: MaritalStatusSchema, where: { title: "widower" } }
+      ]
+    });
+    processStats("Widowers", widower.count);
+  } catch (error) {
+    return error;
+  }
+};
 async function getStats() {
   statisticsData = [];
   await total_members();
@@ -522,6 +586,10 @@ async function getStats() {
   await rrwStats();
   await umyfStats();
   await jcStats();
+  await genderStats();
+  await membershipStats();
+  await maritalStats();
+  console.log(statisticsData);
   return statisticsData;
 }
 const sequelize = require("../../api/dbConfig").db;
@@ -529,11 +597,13 @@ sequelize.sync().then(() => console.log("db is ready")).catch((err) => console.l
 let mainWindow;
 function createWindow() {
   mainWindow = new electron.BrowserWindow({
-    width: 800,
-    height: 600,
+    title: "Church Admin App",
+    // fullscreen:true,
+    // width: 800,
+    // height: 600,
     webPreferences: {
       preload: path__namespace.join(__dirname, "../../out/preload/preload.js"),
-      webSecurity: false
+      webSecurity: true
     }
   });
   mainWindow.loadURL("http://localhost:5173");

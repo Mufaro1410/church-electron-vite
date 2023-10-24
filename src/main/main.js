@@ -2,7 +2,9 @@ import { app, BrowserWindow, ipcMain} from 'electron';
 import * as path from 'path';
 
 const sequelize = require('../../api/dbConfig').db
+// console.log(sequelize.models);
 
+import { addChurch, getChurch, updateChurch, deleteChurch } from '../../api/models/churchModel'
 import { addUser, getUsers, getUser, updateUser, removeUser } from '../../api/models/usersModel'
 import { addMembers, addMember, readMembers, readMember, patchMember, removeMember } from '../../api/models/memberModel'
 import { addMaritalStatus, getMaritalStatuses, getMaritalStatus, updateMaritalStatus, removeMaritalStatus } from '../../api/models/maritalStatusModel'
@@ -17,11 +19,13 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    title: 'Church Admin App',
+    // fullscreen:true,
+    // width: 800,
+    // height: 600,
     webPreferences: {
       preload: path.join(__dirname, '../../out/preload/preload.js'),
-      webSecurity: false,
+      webSecurity: true,
     },
   });
 

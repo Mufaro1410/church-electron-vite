@@ -22,9 +22,9 @@ export default function LoginPage() {
       <div className="max-w-md w-full mx-auto space-y-8">
         <Header
           heading="Login to your account"
-          paragraph="Don't have an account yet? "
-          linkName="Signup"
-          linkUrl="/signup"
+          paragraph="Not registered yet? "
+          linkName="Register"
+          linkUrl="/registration"
         />
         <Login />
       </div>

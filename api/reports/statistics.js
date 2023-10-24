@@ -50,7 +50,7 @@ const rrwStats = async () => {
     try {
       const total_rrw_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: {title: ['rrw-f', 'rrw-probation'] }}
+          { model: SocietySchema, where: {title: ['rrw-full', 'rrw-probation'] }}
         ],
       })
       processStats('Total RRW Members', total_rrw_members.count)
@@ -108,7 +108,7 @@ const jcStats = async () => {
     try {
       const total_jc_members = await MemberSchema.findAndCountAll({
         include: [
-          { model: SocietySchema, where: {title: ['jc-b', 'jc-nb'] }}
+          { model: SocietySchema, where: {title: ['jc-b', 'jc-nb']}}
         ],
       })
       processStats('Total JC Members', total_jc_members.count)
@@ -133,6 +133,79 @@ const jcStats = async () => {
     }
 }
 
+const genderStats = async () => {
+  try {
+    const males = await MemberSchema.findAndCountAll({where: {gender: 'male'}})
+    processStats('Males', males.count)
+
+    const females = await MemberSchema.findAndCountAll({where: {gender: 'female'}})
+    processStats('Females', females.count)
+  } catch (error) {
+    return error
+  }
+}
+
+const membershipStats = async () => {
+  try {
+    const full = await MemberSchema.findAndCountAll({
+      include: [
+        {model: MembershipSchema, where: {title: 'full'}}
+      ]
+    })
+    processStats('Full Members', full.count)
+
+    const probation = await MemberSchema.findAndCountAll({
+      include: [
+        {model: MembershipSchema, where: {title: 'probation'}}
+      ]
+    })
+    processStats('Probation Members', probation.count)
+  } catch (error) {
+    return error
+  }
+}
+
+const maritalStats = async () => {
+  try {
+    const single = await MemberSchema.findAndCountAll({
+      include: [
+        {model: MaritalStatusSchema, where: {title: 'single'}}
+      ]
+    })
+    processStats('Singles', single.count)
+
+    const married = await MemberSchema.findAndCountAll({
+      include: [
+        {model: MaritalStatusSchema, where: {title: 'married'}}
+      ]
+    })
+    processStats('Married', married.count)
+
+    const divorced = await MemberSchema.findAndCountAll({
+      include: [
+        {model: MaritalStatusSchema, where: {title: 'divorced'}}
+      ]
+    })
+    processStats('Divorced', divorced.count)
+
+    const widow = await MemberSchema.findAndCountAll({
+      include: [
+        {model: MaritalStatusSchema, where: {title: 'widow'}}
+      ]
+    })
+    processStats('Widows', widow.count)
+
+    const widower = await MemberSchema.findAndCountAll({
+      include: [
+        {model: MaritalStatusSchema, where: {title: 'widower'}}
+      ]
+    })
+    processStats('Widowers', widower.count)
+  } catch (error) {
+    return error
+  }
+}
+
 async function getStats() {
   statisticsData = []
   await total_members()
@@ -140,6 +213,10 @@ async function getStats() {
   await rrwStats()
   await umyfStats()
   await jcStats()
+  await genderStats()
+  await membershipStats()
+  await maritalStats()
+  console.log(statisticsData);
   return statisticsData
 }
 

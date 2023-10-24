@@ -1,31 +1,34 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginFields } from "../constants/formFields";
+import { churchRegistrationFields } from "../constants/formFields";
 import Input from "./Input";
-import FormExtra from './FormExtra';
+// import FormExtra from './FormExtra';
 import FormAction from './FormAction';
 
-const fields = loginFields;
+const fields = churchRegistrationFields;
 let fieldsState = {};
 fields.forEach(field => fieldsState[field.id]='');
 
-export default function Login(){
-    const [loginState, setLoginState] = useState(fieldsState);
+export default function Registration(){
+    const [regState, setRegState] = useState(fieldsState);
 
     const navigate = useNavigate();
 
     const handleChange=(e)=>{
-        setLoginState({...loginState, [e.target.id]: e.target.value})
+        setRegState({...regState, [e.target.id]: e.target.value})
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        authenticateUser();
-        navigate('/dashboard');
+        registerChurch();
+        setRegState(fieldsState)
+        navigate('/signup');
     }
 
     //Handle Login API Integration here
-    const authenticateUser = () =>{}
+    const registerChurch = () =>{
+        console.log(regState);
+    }
 
     return(
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
@@ -34,7 +37,7 @@ export default function Login(){
                     <Input
                         key={field.id}
                         handleChange={handleChange}
-                        value={loginState[field.id]}
+                        value={regState[field.id]}
                         labelText={field.labelText}
                         labelFor={field.labelFor}
                         id={field.id}
@@ -46,8 +49,8 @@ export default function Login(){
                 )}
             </div>
 
-            <FormExtra/>
-            <FormAction text="Login"/>
+            {/* <FormExtra/> */}
+            <FormAction text="Proceed"/>
         </form>
     )
 }
