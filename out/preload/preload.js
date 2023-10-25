@@ -1,6 +1,14 @@
 "use strict";
 const electron = require("electron");
+function ipcRendering(method, path, data) {
+  if (method === "send") {
+    electron.ipcRenderer.send(method, path, data);
+    return;
+  }
+  electron.ipcRenderer.invoke(method, path, data);
+}
 electron.contextBridge.exposeInMainWorld("electronAPI", {
+  rendering: (method, path, data) => ipcRendering(method, path, data),
   login: (data) => electron.ipcRenderer.invoke("login", data),
   resetPassword: () => electron.ipcRenderer.send("resetPassword"),
   logout: () => electron.ipcRenderer.send("logout"),

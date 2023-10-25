@@ -14,6 +14,7 @@ export default function Sidebar() {
         { title: "Finance", src: "Chat", gap: false },
         { title: "Events ", src: "Calendar" },
         { title: "Reports", src: "Chart" },
+        { title: "History", src: "Folder" },
         { title: "Settings", src: "Setting" },
         { title: "Logout", src: "Folder" },
     ];

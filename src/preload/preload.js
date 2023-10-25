@@ -1,6 +1,19 @@
 import { contextBridge , ipcRenderer } from 'electron'
 
+function ipcRendering(method, path, data) {
+  if (method === 'send') {
+    // console.log(method, path, data);
+    ipcRenderer.send(method, path, data)
+    return
+  }
+  // console.log(method, path, data);
+  ipcRenderer.invoke(method, path, data)
+}
+
 contextBridge.exposeInMainWorld('electronAPI', {
+
+  rendering: (method, path, data) => ipcRendering(method, path, data),
+
   login: (data) => ipcRenderer.invoke('login', data),
   resetPassword: () => ipcRenderer.send('resetPassword'),
   logout: () => ipcRenderer.send('logout'),

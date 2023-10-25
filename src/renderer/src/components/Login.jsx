@@ -20,12 +20,15 @@ export default function Login(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        authenticateUser();
+        authenticateUser({id: '', data: loginState});
+        setLoginState(fieldsState)
         navigate('/dashboard');
     }
 
     //Handle Login API Integration here
-    const authenticateUser = () =>{}
+    const authenticateUser = (data) =>{
+        window.electronAPI.rendering('invoke', 'login', data)
+    }
 
     return(
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">

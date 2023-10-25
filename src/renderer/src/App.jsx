@@ -9,6 +9,7 @@ import Members from './pages/Members';
 import Finance from './pages/Finance';
 import Events from './pages/Events';
 import Reports from './pages/Reports';
+import History from './pages/History';
 import Settings from './pages/Settings';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <Route path="finance" element={<Finance />} />
               <Route path="events" element={<Events />} />
               <Route path="reports" element={<Reports />} />
+              <Route path="history" element={<History />} />
               <Route path="settings" element={<Settings />} />
               <Route index element={<Dashboard />} />
             </Route>
