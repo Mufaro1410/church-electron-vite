@@ -1,10 +1,10 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import * as path from "path";
 
+import ipcHandler from "./ipcMain";
+
 const sequelize = require("../../api/dbConfig").db;
 // console.log(sequelize.models);
-
-import { getStats } from "../../api/reports/statistics";
 
 sequelize
   .sync()
@@ -23,6 +23,7 @@ function createWindow() {
       preload: path.join(__dirname, "../../out/preload/preload.js"),
       webSecurity: true,
     },
+    // devTools: true
   });
 
   // Vite dev server URL
@@ -46,14 +47,10 @@ app.on("activate", () => {
   }
 });
 
-ipcMain.on("send", (event, path, data) => {
-  console.log("sending...", path, data);
+ipcMain.on("send", async (event, path, data) => {
+  return await ipcHandler(path, data)
 });
 
-ipcMain.handle("invoke", (event, path, data) => {
-  console.log("handling", path, data);
-});
-
-ipcMain.handle("statistics", async () => {
-  console.log("stats");
+ipcMain.handle("invoke", async (event, path, data) => {
+  return await ipcHandler(path, data)
 });

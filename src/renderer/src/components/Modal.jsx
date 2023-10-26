@@ -30,11 +30,11 @@ export default function Modal( { title, btnName, closeBtn, memberDetails, closeM
     e.preventDefault()
     if (!memberState.id) {
       // console.log('creating...');
-      const res = await window.electronAPI.createNewMember(memberState)
+      const res = await window.electronAPI.rendering('invoke', 'addMember',  {id: memberState.id, data: memberState})
       alert(`${res.lastName} ${res.firstName} created`)
     } else {
       // console.log('updating...');
-      let res = await window.electronAPI.updateMember(memberState.id, memberState)
+      let res = await window.electronAPI.rendering('invoke', 'updateMember', {id: memberState.id, data: memberState})
       alert(`${res.lastName} ${res.firstName} updated successfully`)
     }
     closeModal()

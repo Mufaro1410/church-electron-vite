@@ -26,8 +26,8 @@ export default function Login(){
     }
 
     //Handle Login API Integration here
-    const authenticateUser = (data) =>{
-        window.electronAPI.rendering('invoke', 'login', data)
+    const authenticateUser = async (data) =>{
+        return await window.electronAPI.rendering('invoke', 'login', data)
     }
 
     return(

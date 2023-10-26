@@ -6,7 +6,7 @@ function Membership() {
   const [title, setTitle] = useState({ title: '' });
 
   const getMemberships = async () => {
-    const res = await window.electronAPI.getMemberships();
+    const res = await window.electronAPI.rendering('invoke', 'getMemberships')
     setMemberships(res);
     localStorage.setItem('membership', JSON.stringify(res))
   };
@@ -16,7 +16,7 @@ function Membership() {
   }, []);
 
   const createMembership = async () => {
-    const res = await window.electronAPI.createNewMembership(title);
+    const res = await window.electronAPI.rendering('invoke', 'addMembership', {data: title})
     alert(`${res.title} membership created successfully`);
     setTitle({ title: '' });
     setDisplayAdd(false)

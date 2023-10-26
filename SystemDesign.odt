@@ -4,7 +4,7 @@
  <office:meta><dc:date>2023-10-25T13:50:29.756460673</dc:date><meta:editing-duration>PT7H2S</meta:editing-duration><meta:editing-cycles>83</meta:editing-cycles><meta:generator>LibreOffice/7.3.7.2$Linux_X86_64 LibreOffice_project/30$Build-2</meta:generator><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="3" meta:paragraph-count="107" meta:word-count="395" meta:character-count="2177" meta:non-whitespace-character-count="1966"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">39158</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">51647</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="long">48870</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="long">21645</config:config-item>
@@ -13,12 +13,12 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">19158</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">57531</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">20239</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">64851</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">39158</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">51647</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="long">48869</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">60801</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">73290</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -88,7 +88,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
    <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2227603</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2252566</config:config-item>
    <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
    <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
@@ -153,7 +153,7 @@
  <office:styles>
   <style:default-style style:family="graphic">
    <style:graphic-properties svg:stroke-color="#3465a4" draw:fill-color="#729fcf" fo:wrap-option="no-wrap" draw:shadow-offset-x="0.3cm" draw:shadow-offset-y="0.3cm" draw:start-line-spacing-horizontal="0.283cm" draw:start-line-spacing-vertical="0.283cm" draw:end-line-spacing-horizontal="0.283cm" draw:end-line-spacing-vertical="0.283cm" style:flow-with-text="false"/>
-   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:font-independent-line-spacing="false">
+   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Liberation Serif" fo:font-size="12pt" fo:language="en" fo:country="ZW" style:letter-kerning="true" style:font-name-asian="Noto Serif CJK SC" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Lohit Devanagari1" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN"/>
@@ -261,18 +261,24 @@
    <style:text-properties officeooo:rsid="00200fe3" officeooo:paragraph-rsid="00200fe3"/>
   </style:style>
   <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties officeooo:paragraph-rsid="00200fe3"/>
-  </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties officeooo:rsid="00200fe3" officeooo:paragraph-rsid="00200fe3"/>
-  </style:style>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties officeooo:rsid="00200fe3" officeooo:paragraph-rsid="0021fd93"/>
   </style:style>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:paragraph-rsid="00200fe3"/>
+  </style:style>
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="0021fd93" officeooo:paragraph-rsid="0021fd93"/>
+  </style:style>
   <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties officeooo:rsid="001f4e97" officeooo:paragraph-rsid="001f4e97"/>
+   <style:text-properties officeooo:rsid="00200fe3" officeooo:paragraph-rsid="00200fe3"/>
   </style:style>
   <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:text-properties officeooo:rsid="00200fe3" officeooo:paragraph-rsid="0021fd93"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:text-properties officeooo:rsid="001f4e97" officeooo:paragraph-rsid="001f4e97"/>
+  </style:style>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties officeooo:rsid="0021fd93" officeooo:paragraph-rsid="0021fd93"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
@@ -336,192 +342,6 @@
     </style:list-level-properties>
    </text:list-level-style-bullet>
   </text:list-style>
-  <text:list-style style:name="L2">
-   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" loext:num-list-format="%2%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" loext:num-list-format="%3%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" loext:num-list-format="%4%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" loext:num-list-format="%5%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" loext:num-list-format="%6%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" loext:num-list-format="%7%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" loext:num-list-format="%8%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" loext:num-list-format="%9%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="7.62cm" fo:text-indent="-0.635cm" fo:margin-left="7.62cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" loext:num-list-format="%10%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="8.255cm" fo:text-indent="-0.635cm" fo:margin-left="8.255cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-  </text:list-style>
-  <text:list-style style:name="L3">
-   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" loext:num-list-format="%2%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" loext:num-list-format="%3%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" loext:num-list-format="%4%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" loext:num-list-format="%5%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" loext:num-list-format="%6%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" loext:num-list-format="%7%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" loext:num-list-format="%8%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" loext:num-list-format="%9%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="7.62cm" fo:text-indent="-0.635cm" fo:margin-left="7.62cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" loext:num-list-format="%10%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="8.255cm" fo:text-indent="-0.635cm" fo:margin-left="8.255cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-  </text:list-style>
-  <text:list-style style:name="L4">
-   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" loext:num-list-format="%1%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" loext:num-list-format="%2%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" loext:num-list-format="%3%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" loext:num-list-format="%4%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" loext:num-list-format="%5%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" loext:num-list-format="%6%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" loext:num-list-format="%7%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" loext:num-list-format="%8%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" loext:num-list-format="%9%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="7.62cm" fo:text-indent="-0.635cm" fo:margin-left="7.62cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" loext:num-list-format="%10%" text:bullet-char="✔">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="8.255cm" fo:text-indent="-0.635cm" fo:margin-left="8.255cm"/>
-    </style:list-level-properties>
-    <style:text-properties style:font-name="OpenSymbol"/>
-   </text:list-level-style-bullet>
-  </text:list-style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0" style:layout-grid-lines="20" style:layout-grid-base-height="0.706cm" style:layout-grid-ruby-height="0.353cm" style:layout-grid-mode="none" style:layout-grid-ruby-below="false" style:layout-grid-print="false" style:layout-grid-display="false" style:footnote-max-height="0cm" loext:margin-gutter="0cm">
     <style:footnote-sep style:width="0.018cm" style:distance-before-sep="0.101cm" style:distance-after-sep="0.101cm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -546,366 +366,366 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
    </text:sequence-decls>
    <text:p text:style-name="Subtitle">Church Admin App</text:p>
-   <text:list xml:id="list839884685" text:style-name="L1">
+   <text:list xml:id="list1148192058" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P5">What is it:</text:p>
+     <text:p text:style-name="P7">What is it:</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P5">A cross platform desktop application system from managing/coordinating church administation tasks.</text:p>
+       <text:p text:style-name="P7">A cross platform desktop application system from managing/coordinating church administation tasks.</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P5">The platform</text:p>
+     <text:p text:style-name="P7">The platform</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P7">Requirements:</text:p>
+       <text:p text:style-name="P9">Requirements:</text:p>
        <text:list>
         <text:list-item>
-         <text:p text:style-name="P7">Membership management</text:p>
+         <text:p text:style-name="P9">Membership management</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P7"><text:span text:style-name="T2">Finance</text:span> management</text:p>
+         <text:p text:style-name="P9"><text:span text:style-name="T2">Finance</text:span> management</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P7">Events managenemt</text:p>
+         <text:p text:style-name="P9">Events managenemt</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P5">Reports management</text:p>
+         <text:p text:style-name="P7">Reports management</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P7"><text:span text:style-name="T2">H</text:span>istory <text:span text:style-name="T2">management</text:span></text:p>
+         <text:p text:style-name="P9"><text:span text:style-name="T2">H</text:span>istory <text:span text:style-name="T2">management</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P7">User authentication and authorisation</text:p>
+         <text:p text:style-name="P9">User authentication and authorisation</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P7">Settings (Application management)</text:p>
+         <text:p text:style-name="P9">Settings (Application management)</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P7">Backing up data</text:p>
+         <text:p text:style-name="P9">Backing up data</text:p>
         </text:list-item>
        </text:list>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P6"><text:span text:style-name="T3">Data requirement</text:span></text:p>
+       <text:p text:style-name="P10">Data requirement</text:p>
        <text:list>
         <text:list-item>
-         <text:p text:style-name="P8">Number of users = 1</text:p>
+         <text:p text:style-name="P10">Number of users = 1</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P8">Members data = 1MB</text:p>
+         <text:p text:style-name="P10">Members data = 1MB</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P8">Finace records = 10MB</text:p>
+         <text:p text:style-name="P10">Finace records = 10MB</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P6">Database tables and data types:</text:p>
+         <text:p text:style-name="P8">Database tables and data types:</text:p>
          <text:list>
           <text:list-item>
-           <text:p text:style-name="P6">Church data:</text:p>
+           <text:p text:style-name="P8">Church data:</text:p>
            <text:list>
             <text:list-item>
-             <text:p text:style-name="P6">id – int</text:p>
+             <text:p text:style-name="P8">id – int</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">name – str</text:p>
+             <text:p text:style-name="P8">name – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">address – str</text:p>
+             <text:p text:style-name="P8">address – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">tel – str</text:p>
+             <text:p text:style-name="P8">tel – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">email – email</text:p>
+             <text:p text:style-name="P8">email – email</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">logo – binary</text:p>
+             <text:p text:style-name="P8">logo – binary</text:p>
             </text:list-item>
            </text:list>
           </text:list-item>
           <text:list-item>
-           <text:p text:style-name="P6">Users data:</text:p>
+           <text:p text:style-name="P8">Users data:</text:p>
            <text:list>
             <text:list-item>
-             <text:p text:style-name="P6">id – int</text:p>
+             <text:p text:style-name="P8">id – int</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">username – str</text:p>
+             <text:p text:style-name="P8">username – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">password – str</text:p>
+             <text:p text:style-name="P8">password – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P6">email – email (optional)</text:p>
+             <text:p text:style-name="P8">email – email (optional)</text:p>
             </text:list-item>
            </text:list>
           </text:list-item>
           <text:list-item>
-           <text:p text:style-name="P6">Members data:</text:p>
+           <text:p text:style-name="P8">Members data:</text:p>
            <text:list>
             <text:list-item>
-             <text:p text:style-name="P5">id – int</text:p>
+             <text:p text:style-name="P7">id – int</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">firstName – str</text:p>
+             <text:p text:style-name="P7">firstName – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">lastName – str</text:p>
+             <text:p text:style-name="P7">lastName – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">gender – bool</text:p>
+             <text:p text:style-name="P7">gender – bool</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">dob – date</text:p>
+             <text:p text:style-name="P7">dob – date</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">address – str</text:p>
+             <text:p text:style-name="P7">address – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">telephone – str</text:p>
+             <text:p text:style-name="P7">telephone – str</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">email – email (optional)</text:p>
+             <text:p text:style-name="P7">email – email (optional)</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">maritalStatus – int/str (foreign key)</text:p>
+             <text:p text:style-name="P7">maritalStatus – int/str (foreign key)</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">membership – int/str (foreign key)</text:p>
+             <text:p text:style-name="P7">membership – int/str (foreign key)</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">society – int/str (foreign key)</text:p>
+             <text:p text:style-name="P7">society – int/str (foreign key)</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">section – int/str (foreign key) </text:p>
+             <text:p text:style-name="P7">section – int/str (foreign key) </text:p>
             </text:list-item>
            </text:list>
           </text:list-item>
           <text:list-item>
-           <text:p text:style-name="P5">Finance records:</text:p>
+           <text:p text:style-name="P7">Finance records:</text:p>
            <text:list>
             <text:list-item>
-             <text:p text:style-name="P5">payments (tithes, membership fees, harvests, others)</text:p>
+             <text:p text:style-name="P7">payments (tithes, membership fees, harvests, others)</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">expences (water, electricity, salaries, others, ...)</text:p>
+             <text:p text:style-name="P7">expences (water, electricity, salaries, others, ...)</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">donations</text:p>
+             <text:p text:style-name="P7">donations</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">offerings</text:p>
+             <text:p text:style-name="P7">offerings</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">others</text:p>
+             <text:p text:style-name="P7">others</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5"/>
+             <text:p text:style-name="P7"/>
             </text:list-item>
            </text:list>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-       </text:list>
-      </text:list-item>
-      <text:list-item>
-       <text:p text:style-name="P7"><text:soft-page-break/>APIs:</text:p>
-       <text:list>
-        <text:list-item>
-         <text:p text:style-name="P5">church:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /church (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /church/id ()</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch /church/id (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5"/>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">membership:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /member (data) – many</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">post /member (data) – one</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /member ()</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /member/id</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch /member/id (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">delete member/id ()</text:p>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">finance:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /payment (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /payments</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /payment/id</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch /payment/id (data)</text:p>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">Events</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /event (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /event//id ()</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch /event/id (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">delete /event/id (data)</text:p>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">Reports:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /report (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /report ()</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /report/id (id)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch report/id (id, data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">delete report/id(data)</text:p>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">History:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /history (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /history ()</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch /history/id (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">delete /history/id</text:p>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">Users:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /user</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /user </text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get /user/id</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch /user/id (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">delete /user/id</text:p>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">Login:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post /login (data)</text:p>
-          </text:list-item>
-         </text:list>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P5">Settings:</text:p>
-         <text:list>
-          <text:list-item>
-           <text:p text:style-name="P5">post setting/[membership | maritalstatus | society | section] (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">get setting/[membership | maritalstatus | society | section] ()</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">put/patch setting/[membership | maritalstatus | society | section]/id (data)</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">delete setting/[membership | maritalstatus | society | section]/id</text:p>
-          </text:list-item>
-          <text:list-item>
-           <text:p text:style-name="P5">post settings/backup (data)</text:p>
           </text:list-item>
          </text:list>
         </text:list-item>
        </text:list>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P5">High level design:</text:p>
+       <text:p text:style-name="P9"><text:soft-page-break/>APIs:</text:p>
        <text:list>
         <text:list-item>
-         <text:p text:style-name="P5">frontend</text:p>
+         <text:p text:style-name="P7">church:</text:p>
          <text:list>
           <text:list-item>
-           <text:p text:style-name="P5">UI – React</text:p>
+           <text:p text:style-name="P7">post /church (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /church/id ()</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch /church/id (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7"/>
           </text:list-item>
          </text:list>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P5">API</text:p>
+         <text:p text:style-name="P7">membership:</text:p>
          <text:list>
           <text:list-item>
-           <text:p text:style-name="P5"><text:soft-page-break/>business logic</text:p>
+           <text:p text:style-name="P7">post /member (data) – many</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">post /member (data) – one</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /member ()</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /member/id</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch /member/id (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">delete member/id ()</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">finance:</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">post /payment (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /payments</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /payment/id</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch /payment/id (data)</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">Events</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">post /event (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /event//id ()</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch /event/id (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">delete /event/id (data)</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">Reports:</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">post /report (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /report ()</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /report/id (id)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch report/id (id, data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">delete report/id(data)</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">History:</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">post /history (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /history ()</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch /history/id (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">delete /history/id</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">Users:</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">post /user</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /user </text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get /user/id</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch /user/id (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">delete /user/id</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">Login:</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">post /login (data)</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">Settings:</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">post setting/[membership | maritalstatus | society | section] (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">get setting/[membership | maritalstatus | society | section] ()</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">put/patch setting/[membership | maritalstatus | society | section]/id (data)</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">delete setting/[membership | maritalstatus | society | section]/id</text:p>
+          </text:list-item>
+          <text:list-item>
+           <text:p text:style-name="P7">post settings/backup (data)</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+       </text:list>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P7">High level design:</text:p>
+       <text:list>
+        <text:list-item>
+         <text:p text:style-name="P7">frontend</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7">UI – React</text:p>
+          </text:list-item>
+         </text:list>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P7">API</text:p>
+         <text:list>
+          <text:list-item>
+           <text:p text:style-name="P7"><text:soft-page-break/>business logic</text:p>
            <text:list>
             <text:list-item>
-             <text:p text:style-name="P5">Electron</text:p>
+             <text:p text:style-name="P7">Electron</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P5">Sequelize (ORM)</text:p>
+             <text:p text:style-name="P7">Sequelize (ORM)</text:p>
             </text:list-item>
            </text:list>
           </text:list-item>
          </text:list>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P5">backend</text:p>
+         <text:p text:style-name="P7">backend</text:p>
          <text:list>
           <text:list-item>
-           <text:p text:style-name="P5">sqlite3</text:p>
+           <text:p text:style-name="P7">sqlite3</text:p>
           </text:list-item>
          </text:list>
         </text:list-item>

@@ -4,10 +4,8 @@ export default function Dashboard() {
   const [stats, setStats] = useState([])
 
   const total_members = async () => {
-    const res = await window.electronAPI.statistics()
-    // console.log(res);
+    const res = await window.electronAPI.rendering('invoke', 'statistics')
     setStats(res)
-    console.log(res);
   }
 
   useEffect(() => {

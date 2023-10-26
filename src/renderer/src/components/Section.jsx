@@ -6,7 +6,7 @@ function Section() {
   const [title, setTitle] = useState({ title: '' });
 
   const getSections = async () => {
-    const res = await window.electronAPI.getSections();
+    const res = await window.electronAPI.rendering('invoke', 'getSections')
     setSections(res);
     localStorage.setItem('section', JSON.stringify(res))
   };
@@ -16,7 +16,7 @@ function Section() {
   }, []);
 
   const createSection = async () => {
-    const res = await window.electronAPI.createNewSection(title);
+    const res = await window.electronAPI.rendering('invoke', 'addSection', {data: title})
     alert(`${res.title} created successfully`);
     setTitle({ title: '' });
     setDisplayAdd(false);

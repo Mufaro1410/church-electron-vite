@@ -11,7 +11,7 @@ export default function Members() {
   const [editMember, setEditMember] = useState(false);
 
   const getMembers = async () => {
-    const res = await window.electronAPI.getMembers();
+    const res = await window.electronAPI.rendering('invoke', 'getMembers')
     setMembers(...[res]);
     setFoundMembers(...[res]);
   };

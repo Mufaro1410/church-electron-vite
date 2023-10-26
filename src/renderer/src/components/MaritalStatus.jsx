@@ -6,7 +6,7 @@ function MaritalStatus() {
   const [title, setTitle] = useState({ title: '' });
 
   const getMaritalStatuses = async () => {
-    const res = await window.electronAPI.getMaritalStatuses();
+    const res = await window.electronAPI.rendering('invoke', 'getMaritalStatuses')
     setMaritalStatuses(res);
     localStorage.setItem('maritalStatus', JSON.stringify(res))
   };
@@ -16,7 +16,7 @@ function MaritalStatus() {
   }, []);
 
   const createMaritalStatus = async () => {
-    const res = await window.electronAPI.createNewMaritalStatus(title);
+    const res = await window.electronAPI.rendering('invoke', 'addMaritalStatus', {data: title})
     alert(`${res.title} marital status created successfully`);
     setTitle({ title: '' });
     setDisplayAdd(false);

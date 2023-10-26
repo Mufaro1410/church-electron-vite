@@ -29,7 +29,7 @@ function AddMembers() {
 
   const bulkCreateMembers = async (e) => {
     e.preventDefault();
-    const res = await window.electronAPI.createNewMembers(fileJSON);
+    const res = await window.electronAPI.rendering('invoke', 'addMembers', {data: fileJSON});
     alert(`${res.message}`);
   };
 

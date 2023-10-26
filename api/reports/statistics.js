@@ -216,7 +216,7 @@ async function getStats() {
   await genderStats()
   await membershipStats()
   await maritalStats()
-  console.log(statisticsData);
+  // console.log(statisticsData);
   return statisticsData
 }
 

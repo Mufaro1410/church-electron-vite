@@ -6,7 +6,7 @@ function Society() {
   const [title, setTitle] = useState({ title: '' });
 
   const getSocieties = async () => {
-    const res = await window.electronAPI.getSocieties();
+    const res = await window.electronAPI.rendering('invoke', 'getSocieties')
     setSocieties(res);
     localStorage.setItem('society', JSON.stringify(res))
   };
@@ -16,7 +16,7 @@ function Society() {
   }, []);
 
   const createSociety = async () => {
-    const res = await window.electronAPI.createNewSociety(title);
+    const res = await window.electronAPI.rendering('invoke', 'addSociety', {data: title})
     alert(`${res.title} created successfully`);
     setTitle({ title: '' });
     setDisplayAdd(false);
