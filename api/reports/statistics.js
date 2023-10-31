@@ -4,7 +4,7 @@ let statisticsData = []
 
 function processStats( name, value) {
   statisticsData.push({'name': name, 'count': value})
-  return
+  // return
 }
 
 const total_members = async () => {
@@ -16,6 +16,12 @@ const total_members = async () => {
       return error;
     }
 }
+
+// const total_members = () => {
+//   MemberSchema.findAndCountAll({})
+//     .then(res => (processStats('Total Church Members', res.count)))
+//     .catch(err => (err))
+// }
 
 const mumcStats = async () => {
     try {

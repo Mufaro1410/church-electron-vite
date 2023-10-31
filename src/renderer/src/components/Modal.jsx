@@ -8,7 +8,7 @@ const fields = memberFields
 const fieldsState = {}
 memberFields.forEach(field => fieldsState[field.id] = '')
 
-export default function Modal( { title, btnName, closeBtn, memberDetails, closeModal} ) {
+export default function Modal( { title, btnName, closeBtn, memberDetails, updateMemberState, updateSelectedMember, closeModal} ) {
   const [memberState, setMemberState] = useState(!memberDetails ? fieldsState : memberDetails)
   const [maritalStatus, setMaritalStatus] = useState(JSON.parse(localStorage.getItem('maritalStatus')))
   const [membership, setMembership] = useState(JSON.parse(localStorage.getItem('membership')))
@@ -36,7 +36,9 @@ export default function Modal( { title, btnName, closeBtn, memberDetails, closeM
       // console.log('updating...');
       let res = await window.electronAPI.rendering('invoke', 'updateMember', {id: memberState.id, data: memberState})
       alert(`${res.lastName} ${res.firstName} updated successfully`)
+      updateSelectedMember(memberState)
     }
+    updateMemberState()
     closeModal()
   }
 

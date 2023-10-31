@@ -404,7 +404,6 @@ const { MaritalStatusSchema, MembershipSchema, MemberSchema, SocietySchema, Sect
 let statisticsData = [];
 function processStats(name, value) {
   statisticsData.push({ "name": name, "count": value });
-  return;
 }
 const total_members = async () => {
   try {

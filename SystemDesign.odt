@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:officeooo="http://openoffice.org/2009/office" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rpt="http://openoffice.org/2005/report" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:xforms="http://www.w3.org/2002/xforms" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><dc:date>2023-10-25T13:50:29.756460673</dc:date><meta:editing-duration>PT7H2S</meta:editing-duration><meta:editing-cycles>83</meta:editing-cycles><meta:generator>LibreOffice/7.3.7.2$Linux_X86_64 LibreOffice_project/30$Build-2</meta:generator><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="3" meta:paragraph-count="107" meta:word-count="395" meta:character-count="2177" meta:non-whitespace-character-count="1966"/></office:meta>
+ <office:meta><dc:date>2023-10-27T20:43:55.520460714</dc:date><meta:editing-duration>PT7H1M53S</meta:editing-duration><meta:editing-cycles>85</meta:editing-cycles><meta:generator>LibreOffice/7.3.7.2$Linux_X86_64 LibreOffice_project/30$Build-2</meta:generator><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="3" meta:paragraph-count="108" meta:word-count="400" meta:character-count="2208" meta:non-whitespace-character-count="1993"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">51647</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">11218</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="long">48870</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="long">21645</config:config-item>
@@ -13,12 +13,12 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">20239</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">64851</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">24448</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">24483</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">51647</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">11218</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="long">48869</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">73290</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">32861</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -88,7 +88,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
    <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2252566</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2362491</config:config-item>
    <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
    <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
@@ -153,7 +153,7 @@
  <office:styles>
   <style:default-style style:family="graphic">
    <style:graphic-properties svg:stroke-color="#3465a4" draw:fill-color="#729fcf" fo:wrap-option="no-wrap" draw:shadow-offset-x="0.3cm" draw:shadow-offset-y="0.3cm" draw:start-line-spacing-horizontal="0.283cm" draw:start-line-spacing-vertical="0.283cm" draw:end-line-spacing-horizontal="0.283cm" draw:end-line-spacing-vertical="0.283cm" style:flow-with-text="false"/>
-   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
+   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:font-independent-line-spacing="false">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Liberation Serif" fo:font-size="12pt" fo:language="en" fo:country="ZW" style:letter-kerning="true" style:font-name-asian="Noto Serif CJK SC" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Lohit Devanagari1" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN"/>
@@ -281,6 +281,9 @@
   <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties officeooo:rsid="0021fd93" officeooo:paragraph-rsid="0021fd93"/>
   </style:style>
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:text-properties officeooo:rsid="00240c7b" officeooo:paragraph-rsid="00240c7b"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="001f4e97"/>
   </style:style>
@@ -366,7 +369,7 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
    </text:sequence-decls>
    <text:p text:style-name="Subtitle">Church Admin App</text:p>
-   <text:list xml:id="list1148192058" text:style-name="L1">
+   <text:list xml:id="list290749769" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P7">What is it:</text:p>
      <text:list>
@@ -501,6 +504,9 @@
             <text:list-item>
              <text:p text:style-name="P7">section – int/str (foreign key) </text:p>
             </text:list-item>
+            <text:list-item>
+             <text:p text:style-name="P11">status – int/str (foreign key)</text:p>
+            </text:list-item>
            </text:list>
           </text:list-item>
           <text:list-item>
@@ -522,7 +528,7 @@
              <text:p text:style-name="P7">others</text:p>
             </text:list-item>
             <text:list-item>
-             <text:p text:style-name="P7"/>
+             <text:p text:style-name="P7"><text:soft-page-break/></text:p>
             </text:list-item>
            </text:list>
           </text:list-item>
@@ -531,7 +537,7 @@
        </text:list>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P9"><text:soft-page-break/>APIs:</text:p>
+       <text:p text:style-name="P9">APIs:</text:p>
        <text:list>
         <text:list-item>
          <text:p text:style-name="P7">church:</text:p>
@@ -706,10 +712,10 @@
          </text:list>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P7">API</text:p>
+         <text:p text:style-name="P7"><text:soft-page-break/>API</text:p>
          <text:list>
           <text:list-item>
-           <text:p text:style-name="P7"><text:soft-page-break/>business logic</text:p>
+           <text:p text:style-name="P7">business logic</text:p>
            <text:list>
             <text:list-item>
              <text:p text:style-name="P7">Electron</text:p>
