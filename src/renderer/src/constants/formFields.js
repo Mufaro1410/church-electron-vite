@@ -96,7 +96,7 @@ const memberFields = [
         isRequired:true,
         placeholder:"Gender",
         autoFocus: true,
-        options: [{id: 1, title: 'gender'}, {id: 2, title: 'male'}, {id: 3, title: 'female'}]
+        options: [{id: 1, title: 'male'}, {id: 2, title: 'female'}]
     },{
         labelText:"DOB",
         labelFor:"dob",
@@ -147,7 +147,6 @@ const memberFields = [
         isRequired:true,
         placeholder:"Marital Status",
         autoFocus: true,
-        // options: [JSON.parse(localStorage.getItem('maritalStatus'))]
     },{
         labelText:"Membership",
         labelFor:"membership",

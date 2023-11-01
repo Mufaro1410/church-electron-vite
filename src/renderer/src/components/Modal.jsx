@@ -4,20 +4,33 @@ import Input from "./Input";
 import Dropdown from './Dropdown';
 import dateHandler from '../../assets/js/dateHandler';
 
-const fields = memberFields
-const fieldsState = {}
-memberFields.forEach(field => fieldsState[field.id] = '')
 
-export default function Modal( { title, btnName, closeBtn, memberDetails, updateMemberState, updateSelectedMember, closeModal} ) {
+export default function Modal( { title, btnName, closeBtn, options, memberDetails, updateMemberState, updateSelectedMember, closeModal} ) {
+  const fields = memberFields
+  const fieldsState = {}
+  memberFields.forEach(field => {
+    if (field.id === 'gender' | field.id === 'maritalStatusId' | field.id === 'membershipId' | field.id === 'societyId' | field.id === 'sectionId') {
+      if (field.id === 'gender') {
+        fieldsState[field.id] = 'male'
+      } else {
+        const value = options[field.id][0].id
+        fieldsState[field.id] = value
+      }
+    } else {
+      fieldsState[field.id] = ''
+    }
+  })
+
   const [memberState, setMemberState] = useState(!memberDetails ? fieldsState : memberDetails)
-  const [maritalStatus, setMaritalStatus] = useState(JSON.parse(localStorage.getItem('maritalStatus')))
-  const [membership, setMembership] = useState(JSON.parse(localStorage.getItem('membership')))
-  const [society, setSociety] = useState(JSON.parse(localStorage.getItem('society')))
-  const [section, setSection] = useState(JSON.parse(localStorage.getItem('section')))
+  // const [maritalStatus, setMaritalStatus] = useState(JSON.parse(localStorage.getItem('maritalStatus')))
+  // const [membership, setMembership] = useState(JSON.parse(localStorage.getItem('membership')))
+  // const [society, setSociety] = useState(JSON.parse(localStorage.getItem('society')))
+  // const [section, setSection] = useState(JSON.parse(localStorage.getItem('section')))
   
   // useEffect(() => console.log(localStorage.getItem('maritalStatus')))
-
-  const options = {maritalStatusId: maritalStatus, membershipId: membership, societyId: society, sectionId: section}
+  
+  // const options = {maritalStatusId: maritalStatus, membershipId: membership, societyId: society, sectionId: section}
+  // console.log(options);
 
   const handleChange = (e) => {
     const name = e.target.id
@@ -29,16 +42,16 @@ export default function Modal( { title, btnName, closeBtn, memberDetails, update
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!memberState.id) {
-      // console.log('creating...');
       const res = await window.electronAPI.rendering('invoke', 'addMember',  {id: memberState.id, data: memberState})
-      alert(`${res.lastName} ${res.firstName} created`)
+      alert(`${res[0].lastName} ${res[0].firstName} created`)
+      console.log(res);
+      updateMemberState('add', res[1])
     } else {
-      // console.log('updating...');
-      let res = await window.electronAPI.rendering('invoke', 'updateMember', {id: memberState.id, data: memberState})
+      const res = await window.electronAPI.rendering('invoke', 'updateMember', {id: memberState.id, data: memberState})
       alert(`${res.lastName} ${res.firstName} updated successfully`)
+      updateMemberState('update', memberState)
       updateSelectedMember(memberState)
     }
-    updateMemberState()
     closeModal()
   }
 

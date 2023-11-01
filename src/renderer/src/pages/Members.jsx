@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Modal from '../components/Modal';
-import dateHander from '../../assets/js/dateHandler'
 import dateHandler from '../../assets/js/dateHandler';
 
 export default function Members() {
@@ -9,16 +8,43 @@ export default function Members() {
   const [memberDetails, setMemberDetails] = useState({});
   const [addMember, setAddMember] = useState(false);
   const [editMember, setEditMember] = useState(false);
-
+  const [dropdownOptions, setDropdownOptions] = useState({})
+  
   const getMembers = async () => {
     const res = await window.electronAPI.rendering('invoke', 'getMembers')
     setMembers(...[res]);
     setFoundMembers(...[res]);
   };
 
+  const getTables = async () => {
+    const maritalStatus = await window.electronAPI.rendering('invoke', 'getMaritalStatuses')
+    const membership = await window.electronAPI.rendering('invoke', 'getMemberships')
+    const society = await window.electronAPI.rendering('invoke', 'getSocieties')
+    const section = await window.electronAPI.rendering('invoke', 'getSections')
+    const options = {maritalStatusId: maritalStatus, membershipId: membership, societyId: society, sectionId: section}
+    setDropdownOptions(options)
+  }
+  
   useEffect(() => {
     getMembers();
+    getTables()
   }, []);
+
+  const updateMemberState = (method, memberData) => {
+    const id = memberData.id
+    if (method === 'add') {
+      return setMembers(...[memberData])
+    }
+    const updatedState = members.map(obj => {
+      if (obj.id === id) {
+        return {...obj, ...memberData}
+      }
+      return obj
+    })
+    setMembers(...[updatedState])
+    // console.log(members);
+    return
+  }
 
   const searchMember = (e) => {
     const keyword = e.target.value;
@@ -57,7 +83,9 @@ export default function Members() {
             Add member
           </button>
         </div>
-        {addMember && <Modal title='Add Member' btnName='Add member' updateMemberState={() => getMembers()}
+        {addMember && <Modal title='Add Member' btnName='Add member' 
+          updateMemberState={(method, memberData) => updateMemberState(method, memberData)}
+          options={dropdownOptions}
           closeBtn='Close' closeModal={() => setAddMember(!addMember)}/>}
         <div className=" shadow rounded p-4">
           <h1 className='font-semibold text-3xl text-primary-600 underline'>Members</h1>
@@ -90,8 +118,11 @@ export default function Members() {
                 Edit
               </button>
             </div>
-            {editMember && <Modal title='Edit Member' btnName='Submit changes' closeBtn='Close' memberDetails={memberDetails} 
-              updateMemberState={() => getMembers()} updateSelectedMember={(memberData) => setMemberDetails(memberData)} closeModal={() => setEditMember(!editMember)}/>
+            {editMember && <Modal title='Edit Member' btnName='Submit changes' closeBtn='Close' memberDetails={memberDetails} options 
+              updateSelectedMember={(memberData) => setMemberDetails(memberData)} 
+              updateMemberState={(method, memberData) => updateMemberState(method, memberData)}
+              options={dropdownOptions}
+              closeModal={() => setEditMember(!editMember)}/>
             }
             <div className='shadow p-4 rounded mb-4'>
               <h1 className='font-semibold text-3xl text-primary-600 underline'>Member details</h1>
@@ -121,3 +152,4 @@ export default function Members() {
     </div>
   );
 }
+

@@ -130,8 +130,10 @@ const addMembers = async (data) => {
 };
 const addMember = async (data) => {
   try {
-    const res = await MemberSchema$1.create(data);
-    return res.toJSON();
+    const newUser = await MemberSchema$1.create(data);
+    const members = await readMembers();
+    const res = [newUser.toJSON(), members];
+    return res;
   } catch (error) {
     console.log(error);
     return error;
