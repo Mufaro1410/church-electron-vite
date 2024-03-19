@@ -28,6 +28,7 @@ function createWindow() {
 
   // Vite dev server URL
   mainWindow.loadURL("http://localhost:5173");
+  // mainWindow.loadURL(`file://${path.join(__dirname, '../renderer/index.html')}`)
   mainWindow.on("closed", () => (mainWindow = null));
 }
 

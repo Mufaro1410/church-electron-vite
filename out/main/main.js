@@ -409,7 +409,8 @@ function processStats(name, value) {
 }
 const total_members = async () => {
   try {
-    const total_members2 = await MemberSchema.findAndCountAll({});
+    const total_members2 = await MemberSchema.findAndCountAll();
+    console.log(total_members2);
     processStats("Total Church Members", total_members2.count);
     return;
   } catch (error) {

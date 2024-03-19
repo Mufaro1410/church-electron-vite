@@ -1,6 +1,21 @@
 const { MaritalStatusSchema, MembershipSchema, MemberSchema, SocietySchema, SectionSchema } = require('../../api/schemas/memberSchema');
 
 let statisticsData = []
+const names = ['Total Church Members']
+
+async function findAndCount(name) {
+  if (name === "Total Church Members") {
+    const res = await MemberSchema.count()
+    statisticsData.push({'name': name, 'count': res})
+    return
+  }
+  const res = await MemberSchema.count({
+    include: [
+      { model: SocietySchema, where: { title: 'mumc-full' } }
+    ],
+  })
+  statisticsData.push({'name': name, 'count': res})
+}
 
 function processStats( name, value) {
   statisticsData.push({'name': name, 'count': value})
@@ -9,7 +24,8 @@ function processStats( name, value) {
 
 const total_members = async () => {
     try {
-      const total_members = await MemberSchema.findAndCountAll({})
+      const total_members = await MemberSchema.findAndCountAll()
+      console.log(total_members);
       processStats('Total Church Members', total_members.count)
       return
     } catch (error) {
@@ -224,6 +240,11 @@ async function getStats() {
   await maritalStats()
   // console.log(statisticsData);
   return statisticsData
+
+  // names.forEach(name => {
+  //   console.log(name);
+  //   findAndCount(name)
+  // })
 }
 
 export { getStats }

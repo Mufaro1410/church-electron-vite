@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Bargraph from "../components/Charts/Bargraph";
+import Piechart from "../components/Charts/Piechart";
 
 export default function Dashboard() {
   const [stats, setStats] = useState([])
@@ -27,6 +29,8 @@ export default function Dashboard() {
           </div>
         ))}
       </div>
+      <Bargraph data={stats}/>
+      <Piechart data={stats}/>
     </div>
   );
 }

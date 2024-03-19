@@ -12,13 +12,13 @@ export default function Modal( { title, btnName, closeBtn, options, memberDetail
     if (field.id === 'gender' | field.id === 'maritalStatusId' | field.id === 'membershipId' | field.id === 'societyId' | field.id === 'sectionId') {
       if (field.id === 'gender') {
         fieldsState[field.id] = 'male'
-      } else {
-        const value = options[field.id][0].id
-        fieldsState[field.id] = value
+        return
       }
-    } else {
-      fieldsState[field.id] = ''
+      const value = options[field.id][0].id
+      fieldsState[field.id] = value
+      return
     }
+    fieldsState[field.id] = ''
   })
 
   const [memberState, setMemberState] = useState(!memberDetails ? fieldsState : memberDetails)
@@ -44,7 +44,6 @@ export default function Modal( { title, btnName, closeBtn, options, memberDetail
     if (!memberState.id) {
       const res = await window.electronAPI.rendering('invoke', 'addMember',  {id: memberState.id, data: memberState})
       alert(`${res[0].lastName} ${res[0].firstName} created`)
-      console.log(res);
       updateMemberState('add', res[1])
     } else {
       const res = await window.electronAPI.rendering('invoke', 'updateMember', {id: memberState.id, data: memberState})

@@ -118,7 +118,7 @@ export default function Members() {
                 Edit
               </button>
             </div>
-            {editMember && <Modal title='Edit Member' btnName='Submit changes' closeBtn='Close' memberDetails={memberDetails} options 
+            {editMember && <Modal title='Edit Member' btnName='Submit changes' closeBtn='Close' memberDetails={memberDetails}
               updateSelectedMember={(memberData) => setMemberDetails(memberData)} 
               updateMemberState={(method, memberData) => updateMemberState(method, memberData)}
               options={dropdownOptions}
